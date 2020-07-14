@@ -18,9 +18,11 @@ jobs:
         with:
           node-version: '12'
       - run: npm install
-      - name: build
+      - name: generate:gh-pages
         run: npm run generate:gh-pages
-      - name: Deploy
+      - name: gzip and brotli output files
+        run: npm run compress
+      - name: deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
