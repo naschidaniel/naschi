@@ -1,5 +1,5 @@
-# tirolair ![[Build Status]](https://github.com/naschidaniel/tirolair/workflows/release/badge.svg)
-A website for tirolair. Visit https://naschidaniel.github.io/tirolair/ for a live preview of the project.
+# naschi.at ![[Build Status]](https://github.com/naschidaniel/naschi/workflows/release/badge.svg)
+My Personal Website. Visit [naschi.at](https://naschi.at) for a live preview of the project.
 
 ## Dependencies
 
