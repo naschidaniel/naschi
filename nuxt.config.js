@@ -10,9 +10,6 @@ const routerBase =
 export default {
   ...routerBase,
   mode: "spa",
-  /*
-   ** Headers of the page
-   */
   head: {
     title: "Daniel Naschberger - Meteorologe und Softwareentwickler",
     meta: [
@@ -106,38 +103,33 @@ export default {
       },
     ],
   },
-  /*
-   ** Customize the progress-bar color
-   */
   loading: { color: "#fff" },
-  /*
-   ** Global CSS
-   */
   css: [],
-  /*
-   ** Plugins to load before mounting the App
-   */
   plugins: [],
-  /*
-   ** Nuxt.js dev-modules
-   */
   buildModules: [
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     "@nuxtjs/tailwindcss",
   ],
-  /*
-   ** Nuxt.js modules
-   */
-  modules: [],
-  /*
-   ** Build configuration
-   */
+  tailwindcss: {
+    configPath: "tailwind.config.js",
+    cssPath: "assets/css/tailwind.css",
+    exposeConfig: false,
+  },
+  modules: [
+    [
+      "nuxt-compress",
+      {
+        gzip: {
+          cache: true,
+        },
+        brotli: {
+          threshold: 10240,
+        },
+      },
+    ],
+  ],
   build: {
-    /*
-     ** You can extend webpack config here
-     */
     extend(config, ctx) {
-      // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
           enforce: "pre",
