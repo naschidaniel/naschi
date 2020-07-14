@@ -1,4 +1,10 @@
-on: [push]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 
 name: release
 
@@ -13,7 +19,7 @@ jobs:
           node-version: '12'
       - run: npm install
       - name: build
-        run: npm run build:gh-pages
+        run: npm run generate:gh-pages
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:

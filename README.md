@@ -1,26 +1,46 @@
-# naschi.at
+# tirolair ![[Build Status]](https://github.com/naschidaniel/tirolair/workflows/release/badge.svg)
+A website for tirolair. Visit https://naschidaniel.github.io/tirolair/ for a live preview of the project.
 
-This is my personal website. naschidaniel.github.io
+## Dependencies
 
-## Project setup
-```
-npm install
-```
+Make sure those are available on your system:
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+* nodejs
+* npm
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Build project
 
-### Lints and fixes files
-```
-npm run lint
+Install dependent node modules.
+
+```bash
+$ npm install
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Development environment
+
+Serve with hot reload at localhost:3000
+```bash
+$ npm run dev
+```
+
+## Lint
+```bash
+$ npm run lint
+```
+or fix lint problems.
+```bash
+$ npm run lintfix
+```
+
+## Build for production and launch server
+
+```bash
+$ npm run build
+$ npm run start
+```
+
+## Generate static project
+
+```bash
+$ npm run generate
+```
