@@ -1,3 +1,3 @@
 <template>
-  <h1>Tandemparagliding</h1>
+  <h1>naschi.at</h1>
 </template>
