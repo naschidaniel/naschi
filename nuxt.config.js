@@ -115,19 +115,6 @@ export default {
     cssPath: "assets/css/tailwind.css",
     exposeConfig: false,
   },
-  modules: [
-    [
-      "nuxt-compress",
-      {
-        gzip: {
-          cache: true,
-        },
-        brotli: {
-          threshold: 10240,
-        },
-      },
-    ],
-  ],
   build: {
     extend(config, ctx) {
       if (ctx.isDev && ctx.isClient) {
