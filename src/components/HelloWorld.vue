@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>naschi.at</h1>
-    <p>This domain is only used for email redirect. Hallo Siggi</p>
+    <p>This domain is only used for email redirect.</p>
   </div>
 </template>
 
