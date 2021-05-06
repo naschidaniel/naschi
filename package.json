@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "gzipper": "^4.0.0",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.15.4"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^1.0.0",
