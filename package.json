@@ -4,6 +4,7 @@
   "private": false,
   "description": "My personal Website",
   "author": "Daniel Naschberger <daniel@naschi.at>",
+  "license": "GPL-3.0",
   "scripts": {
     "build": "vue-tsc --noEmit && vite build",
     "build:gh-pages": "DEPLOY_ENV=GH_PAGES vite build",
