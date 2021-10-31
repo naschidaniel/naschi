@@ -7,7 +7,6 @@
   "license": "GPL-3.0",
   "scripts": {
     "build": "vue-tsc --noEmit && vite build",
-    "build:gh-pages": "DEPLOY_ENV=GH_PAGES vite build",
     "lint": "eslint 'src/**/*.{js,ts,vue}' --fix",
     "dev": "vite",
     "serve": "vite preview"
