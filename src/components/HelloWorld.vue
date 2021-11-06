@@ -13,6 +13,9 @@ export default defineComponent({
 </script>
 
 <style scoped>
+div {
+  margin-top: 300px;
+}
 h1 {
   margin: 100px 0 0;
   color: #d3d3d3;

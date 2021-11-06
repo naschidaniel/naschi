@@ -1,16 +1,16 @@
 <template>
   <HelloWorld />
+  <AppFooter />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import AppFooter from "./components/AppFooter.vue";
 import HelloWorld from "./components/HelloWorld.vue";
 
 export default defineComponent({
   name: "App",
-  components: {
-    HelloWorld,
-  },
+  components: { AppFooter, HelloWorld },
 });
 </script>
 
@@ -21,6 +21,7 @@ export default defineComponent({
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  width: 100%;
+  height: 100%;
 }
 </style>
