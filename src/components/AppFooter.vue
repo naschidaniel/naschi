@@ -1,6 +1,10 @@
 <template>
-  <div>
-    Version: {{ formatDate(updateTime) }},
+  <div style="text-align: center">
+    <router-link to="/">home</router-link>
+    <span class="spacer">–</span>
+    <router-link to="/imprit">imprit</router-link>
+    <span class="spacer">–</span>
+    <span>Version: {{ formatDate(updateTime) }},&nbsp;</span>
     <a
       href="https://github.com/naschidaniel/naschi/"
       target="_blank"
@@ -34,13 +38,14 @@ div {
   font-size: 85%;
   margin-top: 40px;
 }
-a {
-  color: rgb(162, 168, 168);
-  cursor: pointer;
-  transition: color 0.5s ease-in-out;
+.spacer {
+  margin-left: 1em;
+  margin-right: 1em;
 }
-a:hover {
-  color: #2865a2;
-  transition: color 0.5s ease-in-out;
+@media only screen and (min-width: 600px) {
+  .spacer {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
 }
 </style>

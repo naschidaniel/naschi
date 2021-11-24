@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1>Daniel Naschberger</h1>
+  <div class="main">
+    <h1 style="text-align: center">Daniel Naschberger</h1>
     <NaschiLogoIcon />
     <div class="link-box">
       <GithubIcon class="icon-github" />
@@ -22,20 +22,6 @@ export default defineComponent({
 </script>
 
 <style scoped>
-h1 {
-  color: #d3d3d3;
-  margin: 100px 0 0;
-}
-
-.link-box {
-  align-items: center;
-  color: #d3d3d3;
-  display: flex;
-  font-size: 150%;
-  justify-content: center;
-  height: 2em;
-  margin: auto;
-}
 .icon-github {
   fill: rgb(201, 201, 201);
   height: 1.5em;
@@ -46,5 +32,14 @@ h1 {
   height: 1.6em;
   margin-left: 3em;
   width: 1.6em;
+}
+
+.link-box {
+  align-items: center;
+  display: flex;
+  font-size: 150%;
+  justify-content: center;
+  height: 2em;
+  margin: auto;
 }
 </style>
