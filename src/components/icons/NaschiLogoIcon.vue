@@ -41,16 +41,18 @@ div {
   height: 15.2em;
 }
 .logo {
-  fill-opacity: 1;
+  opacity: 1;
   fill-rule: nonzero;
-  height: 15em;
-  opacity: 0.8;
+  height: 14.5em;
+  margin: auto;
+  opacity: 0.7;
   stroke: none;
   transition: all 0.5s ease-in-out;
-  width: 15em;
+  width: 14.5em;
 }
 .logo:hover {
   height: 15.2em;
+  margin: auto;
   opacity: 1;
   transition: all 0.5s ease-in-out;
   width: 15.2em;
