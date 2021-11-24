@@ -30,8 +30,17 @@ export default defineComponent({
 
 <style scoped>
 div {
-  margin-top: 40px;
   color: #525464;
   font-size: 85%;
+  margin-top: 40px;
+}
+a {
+  color: rgb(162, 168, 168);
+  cursor: pointer;
+  transition: color 0.5s ease-in-out;
+}
+a:hover {
+  color: #2865a2;
+  transition: color 0.5s ease-in-out;
 }
 </style>
