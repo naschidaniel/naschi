@@ -1,20 +1,29 @@
 <template>
-  <div>Version: {{ formatDateTime(today) }}</div>
+  <div>
+    Version: {{ formatDate(updateTime) }},
+    <a
+      href="https://github.com/naschidaniel/naschi/"
+      target="_blank"
+      rel="noopener"
+      >{{ currentGitSha }}</a
+    >
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { formatDateTime } from "../util/formatDate";
+import { formatDate } from "../util/formatDate";
 
 export default defineComponent({
   name: "AppFooter",
   data() {
     return {
-      today: new Date(),
+      updateTime: new Date(import.meta.env.VITE_APP_UPDATETIME),
+      currentGitSha: import.meta.env.VITE_APP_GITSHA,
     };
   },
   methods: {
-    formatDateTime,
+    formatDate,
   },
 });
 </script>
