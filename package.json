@@ -16,7 +16,8 @@
     "@typescript-eslint/eslint-plugin": "^5.2.0",
     "@vue/eslint-config-typescript": "^9.0.0",
     "prettier-eslint": "^13.0.0",
-    "vue": "^3.2.13"
+    "vue": "^3.2.13",
+    "vue-router": "4"
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^5.2.0",

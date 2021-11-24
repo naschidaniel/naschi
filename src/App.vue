@@ -1,5 +1,5 @@
 <template>
-  <HelloWorld />
+  <router-view />
   <AppFooter />
 </template>
 
@@ -10,7 +10,7 @@ import HelloWorld from "./components/HelloWorld.vue";
 
 export default defineComponent({
   name: "App",
-  components: { AppFooter, HelloWorld },
+  components: { AppFooter },
 });
 </script>
 
