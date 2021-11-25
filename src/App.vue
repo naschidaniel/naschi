@@ -46,6 +46,10 @@ a:hover {
   margin-top: 4em;
 }
 
+.router-link-active {
+  color: #2865a2;
+}
+
 h1 {
   margin: 1em 0 0;
 }

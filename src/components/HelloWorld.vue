@@ -11,9 +11,9 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import GithubIcon from "./icons/GithubIcon.vue";
-import NaschiLogoIcon from "./icons/NaschiLogoIcon.vue";
-import OutlineMailIcon from "./icons/OutlineMailIcon.vue";
+import GithubIcon from "./GithubIcon.vue";
+import NaschiLogoIcon from "./NaschiLogoIcon.vue";
+import OutlineMailIcon from "./OutlineMailIcon.vue";
 
 export default defineComponent({
   name: "HelloWorld",

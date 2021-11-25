@@ -21,9 +21,9 @@
         <strong>Firmenbuchgericht:</strong> Innsbruck<br />
         <strong>Firmensitz:</strong> 6020 Innsbruck<br />
         <br />
-        <strong>Tel.:</strong>
+        <strong>Tel.:</strong>&nbsp;
         <a target="_blank" href="tel:004369910030004">+43 699 10030004</a><br />
-        <strong>E-Mail:</strong>
+        <strong>E-Mail:</strong>&nbsp;
         <a target="_blank" href="mailto:daniel@naschi.at">daniel@naschi.at</a
         ><br />
         <br />
