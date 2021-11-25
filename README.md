@@ -1,6 +1,8 @@
-# naschi.at
+# naschi.at [![build](https://github.com/naschidaniel/naschi/actions/workflows/build.yml/badge.svg)](https://github.com/naschidaniel/naschi/actions/workflows/build.yml)
 
-This is my personal website.
+![Logo naschi.at](./public/NaschiLogo.png "naschi.at")
+
+Visit my personal website [https://naschi.at](https://naschi.at).
 
 ## Project setup
 ```
