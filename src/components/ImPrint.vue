@@ -106,6 +106,38 @@
         >
         geschützt.
       </p>
+      <div>
+        <h2>Verwendete Softwarepaket und Lizenzinformation</h2>
+      </div>
+      <ul>
+        <li v-for="dependency in dependencies" :key="dependency.version">
+          <span style="font-weight: bold">{{ dependency.name }} </span> –
+          <span style="font-style: italic">{{ dependency.version }}</span> –
+          {{ dependency.license }} License
+        </li>
+      </ul>
     </div>
   </div>
 </template>
+
+<script lang="ts">
+import { defineComponent } from "@vue/runtime-core";
+import { Dependency } from "../model/dependency";
+
+export default defineComponent({
+  data() {
+    return {
+      dependencies: JSON.parse(
+        import.meta.env.VITE_APP_DEPENDENCIES
+      ) as Dependency[],
+    };
+  },
+});
+</script>
+
+<style scoped>
+ul {
+  list-style-type: square;
+  padding-left: 1em;
+}
+</style>

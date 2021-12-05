@@ -24,7 +24,7 @@ export default defineComponent({
   name: "AppFooter",
   data() {
     return {
-      updateTime: new Date(import.meta.env.VITE_APP_UPDATETIME),
+      updateTime: new Date(import.meta.env.VITE_APP_BUILDTIME),
       currentGitSha: import.meta.env.VITE_APP_GITSHA,
     };
   },

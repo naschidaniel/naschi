@@ -8,8 +8,9 @@ declare module "*.vue" {
 
 interface ImportMetaEnv
   extends Readonly<Record<string, string | boolean | undefined>> {
+  readonly VITE_APP_BUILDTIME: string;
+  readonly VITE_APP_DEPENDENCIES: string;
   readonly VITE_APP_GITSHA: string;
-  readonly VITE_APP_UPDATETIME: string;
 }
 
 interface ImportMeta {
