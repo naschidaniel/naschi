@@ -2,7 +2,7 @@
   <div style="text-align: center">
     <router-link to="/">Home</router-link>
     <span class="spacer">–</span>
-    <router-link to="/imprit">Impressum</router-link>
+    <router-link to="/impressum">Impressum</router-link>
     <span class="spacer sm-d-none">–</span>
     <br class="md-d-none" />
     <span class="sm-mt-2"

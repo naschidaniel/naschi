@@ -8,7 +8,7 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     { path: "/", component: HelloWorld },
-    { path: "/imprit", component: Imprit },
+    { path: "/impressum", component: Imprit },
     { path: "/:pathMatch(.*)*", name: "NotFound", component: NotFound },
   ],
 });
