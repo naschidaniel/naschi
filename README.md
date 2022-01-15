@@ -9,19 +9,23 @@ Visit my personal website [https://naschi.at](https://naschi.at).
 yarn
 ```
 
-### Compiles and hot-reloads for development
+### Development
+#### Compiles and hot-reloads for development
 ```
 yarn dev
 ```
 
-### Lints and fixes files
+#### Lints and fixes files
 ```
 yarn lint
 ```
 
-### Compiles and minifies for production and Live preview
+### Production
+#### Compiles and minifies for production
 ```
 yarn build
+
+# preview of latest build
 yarn serve
 ```
 
