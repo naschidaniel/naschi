@@ -16,22 +16,10 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
+<script setup lang="ts">
 import { formatDate } from "../util/formatDate";
-
-export default defineComponent({
-  name: "AppFooter",
-  data() {
-    return {
-      updateTime: new Date(import.meta.env.VITE_APP_BUILDTIME),
-      currentGitSha: import.meta.env.VITE_APP_GITSHA,
-    };
-  },
-  methods: {
-    formatDate,
-  },
-});
+const updateTime = new Date(import.meta.env.VITE_APP_BUILDTIME);
+const currentGitSha = import.meta.env.VITE_APP_GITSHA;
 </script>
 
 <style scoped>

@@ -9,16 +9,10 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
+<script setup lang="ts">
 import GithubIcon from "./GithubIcon.vue";
 import NaschiLogoIcon from "./NaschiLogoIcon.vue";
 import OutlineMailIcon from "./OutlineMailIcon.vue";
-
-export default defineComponent({
-  name: "HelloWorld",
-  components: { GithubIcon, NaschiLogoIcon, OutlineMailIcon },
-});
 </script>
 
 <style scoped>
