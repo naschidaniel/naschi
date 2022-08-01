@@ -26,11 +26,12 @@ yarn lint
 yarn build
 
 # preview of latest build
-yarn serve
+yarn preview
 ```
 
 ## Changelog
 
+- 2022-08-01 migrate from a [Vue3](https://vuejs.org/) SPA to a [Astro.build](https://astro.build/) and [Vue3](https://vuejs.org/) MPA
 - 2021-09-27 use recommended vite template vue-ts 
 - 2021-08-03 replace npm with yarn
 - 2021-07-15 Update to Vue3, Vite and Typescript

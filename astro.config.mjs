@@ -1,5 +1,6 @@
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
+import { defineConfig } from 'astro/config';
+import vue from '@astrojs/vue';
+
 import { readFileSync } from "fs";
 import { execSync } from "child_process";
 
@@ -30,7 +31,6 @@ process.env.VITE_APP_GITSHA = execSync("git rev-parse --short HEAD", {
   encoding: "utf8",
 }).trim();
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+	integrations: [vue()],
 });

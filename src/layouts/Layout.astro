@@ -1,0 +1,225 @@
+---
+import { formatDate } from "../util/formatDate";
+export interface Props {
+  title: string;
+}
+
+const _builTime = new Date(import.meta.env.VITE_APP_BUILDTIME);
+const builTime = formatDate(_builTime);
+const currentGitSha = import.meta.env.VITE_APP_GITSHA;
+
+const { title } = Astro.props as Props;
+---
+
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:url" content="https://naschi.at/" />
+    <meta
+      property="og:site_name"
+      content="naschi.at – Meine Website mit den Links zu meinen Projekten"
+    />
+    <meta
+      property="og:description"
+      content="naschi.at – Meine Website mit den Links zu meinen Projekten"
+    />
+    <meta property="og:title" content="naschi.at – Daniel Naschberger" />
+    <meta property="og:type" content="websit" />
+    <meta property="og:image" content="https://naschi.at/NaschiLogo.png" />
+    <meta property="og:image:alt" content="Logo Cloud Wolke naschi.at" />
+    <meta
+      name="description"
+      content="naschi.at – Meine Website mit den Links zu meinen Projekten"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>{title}</title>
+  </head>
+  <body style="background-color: #001414;">
+    <main class="container">
+      <div>
+        <slot />
+      </div>
+    </main>
+    <footer>
+      <div style="text-align: center">
+        <a href="/">Home</a>
+        <span class="spacer">–</span>
+        <a href="/impressum">Impressum</a>
+        <span class="spacer sm-d-none">–</span>
+        <br class="md-d-none" />
+        <span class="sm-mt-2"
+          >Version: {builTime},&nbsp;<a
+            href="https://github.com/naschidaniel/naschi/"
+            target="_blank"
+            rel="noopener"
+            >{currentGitSha}
+          </a>
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  body {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    color: #d3d3d3;
+    height: 100%;
+    width: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a {
+    color: rgb(162, 168, 168);
+    cursor: pointer;
+    transition: color 0.5s ease-in-out;
+  }
+
+  a:hover {
+    color: #2865a2;
+    transition: color 0.5s ease-in-out;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 4em;
+    max-width: 95%;
+    text-align: left;
+  }
+
+  .main {
+    margin-top: 4em;
+  }
+
+  .router-link-active {
+    color: #2865a2;
+  }
+
+  h1 {
+    margin: 1em 0 0;
+  }
+
+  h2 {
+    margin: 2em 0 0;
+  }
+
+  footer {
+    color: #525464;
+    font-size: 85%;
+    margin-top: 4em;
+    margin-bottom: 3em;
+  }
+
+  .spacer {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+
+  @media only screen and (min-width: 600px) {
+    .container {
+      max-width: 75%;
+    }
+    .main {
+      margin-top: 10em;
+    }
+    h1 {
+      margin: 3em 0 0;
+    }
+    .md-d-none {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .sm-d-none {
+      display: none;
+    }
+    .sm-mt-2 {
+      margin-top: 2em;
+      display: block;
+    }
+    .spacer {
+      margin-left: 0.7em;
+      margin-right: 0.7em;
+    }
+  }
+</style>

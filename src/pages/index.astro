@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+import GithubIcon from "../components/GithubIcon.astro";
+import NaschiLogoIcon from "../components/NaschiLogoIcon.astro";
+import OutlineMailIcon from "../components/OutlineMailIcon.astro";
+---
+
+<Layout title="naschi.at – Daniel Naschberger">
+  <div class="main">
+    <h1 style="text-align: center">Daniel Naschberger</h1>
+    <NaschiLogoIcon client:load />
+    <div class="link-box">
+      <GithubIcon client:load />
+      <OutlineMailIcon client:load />
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .link-box {
+    align-items: center;
+    display: flex;
+    font-size: 150%;
+    justify-content: center;
+    height: 2em;
+    margin: auto;
+  }
+</style>
