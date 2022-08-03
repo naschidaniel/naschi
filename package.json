@@ -10,7 +10,13 @@
     "lint": "eslint 'src/**/*.{astro,js,ts,vue}' --fix",
     "lint-no-fix": "eslint 'src/**/*.{js,ts,vue}'",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "optimize-images:1280": "./image-optimizer --source ./media/ --destination public/media --suffix 1280 --width 1280 --quality 90 --webpimage true --thumbnail false",
+    "optimize-images:768": "./image-optimizer --source ./media/ --destination public/media --suffix 768 --width 768 --quality 90 --webpimage true --thumbnail false",
+    "optimize-images:640": "./image-optimizer --source ./media/ --destination public/media --suffix 640 --width 640 --quality 90 --webpimage true --thumbnail false",
+    "optimize-images": "rm -rf public/media && yarn optimize-images:1280 && yarn optimize-images:768 && yarn optimize-images:640"
+
+
   },
   "dependencies": {
     "astro": "^1.0.0-rc.3",
