@@ -11,77 +11,34 @@
         :src="selectedImage.fallback.src"
         height="70%"
         width="70%"
-        :title="selectedImage.fallback.title"
+        title="hoho"
       />
     </picture>
-    <button @click="count++">Add 1</button>
+    <button @click="add()">Add 1</button>
     <p>Count is: {{ count }}</p>
   </div>
 </template>
 <script setup lang="ts">
 import { ref, computed, ComputedRef } from "vue";
-import { ResponsiveSourceInterface } from "../model/image";
+import { ResponsiveSource } from "../model/image";
 
 const count = ref(0);
+const add = () => (count.value = count.value + 1);
 
-class ResponsiveSource implements ResponsiveSourceInterface {
-  sizes: string;
-  srcset: string;
-  srcsetWebp: string;
-  fallback: {
-    src: string;
-    width: number;
-    height: number;
-  };
-  constructor(
-    gitsha: string,
-    heights: number[],
-    image: string,
-    widths: number[]
-  ) {
-    const srcset = [];
-    const srcsetWebp = [];
-    for (const [i, width] of widths.entries()) {
-      const prefix = image.split(".")[0];
-      const extension = image.split(".")[1];
-      const postfix = `.${extension}`;
-      const postfixWebp = postfix.replace(extension, "webp");
-      srcset.push(`${prefix}_${width}${postfix}?v=${gitsha} ${width}w`);
-      srcsetWebp.push(`${prefix}_${width}${postfixWebp}?v=${gitsha} ${width}w`);
-      this.sizes = `(max-width: ${width}px) 100vw`;
-    }
-    this.srcset = srcset.join(", ");
-    this.srcsetWebp = srcsetWebp.join(", ");
-    this.fallback = {
-      src: image.replace(".jpg", "_1280.jpg"),
-      width: widths[0],
-      height: heights[0],
-    };
-  }
-}
+const images = [
+  {
+    sizes: "",
+    srcset: "",
+    srcsetWebp: "",
+    fallback: {
+      src: "/media/8_schlafzimmer_thumbnail_640.jpg",
+      width: 640,
+      height: 640,
+    },
+  } as ResponsiveSource,
+];
 
 const gitsha = import.meta.env.VITE_APP_GITSHA;
-
-const images: ResponsiveSource[] = [
-  new ResponsiveSource(
-    gitsha,
-    [1280, 768, 640],
-    "/media/1_grundriss.jpg",
-    [1280, 768, 640]
-  ),
-  new ResponsiveSource(
-    gitsha,
-    [1280, 768, 640],
-    "/media/2_wohn_esszimmer_li.jpg",
-    [1280, 768, 640]
-  ),
-  new ResponsiveSource(
-    gitsha,
-    [1280, 768, 640],
-    "/media/3_wohn_esszimmer_re.jpg",
-    [1280, 768, 640]
-  ),
-];
 
 const selectedImage: ComputedRef<ResponsiveSource> = computed(() => images[0]);
 </script>
