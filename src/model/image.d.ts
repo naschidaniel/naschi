@@ -1,12 +1,19 @@
+export interface Gallery {
+  fileNameSrc: string;
+  alt: string;
+  title: string;
+  isThumbnail?: false;
+}
+
 export interface ResponsiveSource {
+  alt: string;
+  height: number;
   sizes: string;
+  src: string;
   srcset: string;
   srcsetWebp: string;
-  fallback: {
-    src: string;
-    width: number;
-    height: number;
-  };
+  title: string;
+  width: number;
 }
 
 export interface OptimizedImage {

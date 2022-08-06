@@ -1,0 +1,299 @@
+[
+  {
+    "fileNameSrc": "/media/10_balkon.jpg",
+    "fileNameThumbnail": "/media/10_balkon_thumbnail_640.jpg",
+    "fileNameThumbnailWebp": "/media/10_balkon_thumbnail_640.webp",
+    "fileName": "/media/10_balkon_640.jpg",
+    "fileNameWebp": "/media/10_balkon_640.webp",
+    "fileType": "jpg",
+    "width": 640
+  },
+  {
+    "fileNameSrc": "/media/11_eingangsbereich.jpg",
+    "fileNameThumbnail": "/media/11_eingangsbereich_thumbnail_640.jpg",
+    "fileNameThumbnailWebp": "/media/11_eingangsbereich_thumbnail_640.webp",
+    "fileName": "/media/11_eingangsbereich_640.jpg",
+    "fileNameWebp": "/media/11_eingangsbereich_640.webp",
+    "fileType": "jpg",
+    "width": 640
+  },
+  {
+    "fileNameSrc": "/media/1_grundriss.jpg",
+    "fileNameThumbnail": "/media/1_grundriss_thumbnail_640.jpg",
+    "fileNameThumbnailWebp": "/media/1_grundriss_thumbnail_640.webp",
+    "fileName": "/media/1_grundriss_640.jpg",
+    "fileNameWebp": "/media/1_grundriss_640.webp",
+    "fileType": "jpg",
+    "width": 640
+  },
+  {
+    "fileNameSrc": "/media/2_wohn_esszimmer_li.jpg",
+    "fileNameThumbnail": "/media/2_wohn_esszimmer_li_thumbnail_640.jpg",
+    "fileNameThumbnailWebp": "/media/2_wohn_esszimmer_li_thumbnail_640.webp",
+    "fileName": "/media/2_wohn_esszimmer_li_640.jpg",
+    "fileNameWebp": "/media/2_wohn_esszimmer_li_640.webp",
+    "fileType": "jpg",
+    "width": 640
+  },
+  {
+    "fileNameSrc": "/media/3_wohn_esszimmer_re.jpg",
+    "fileNameThumbnail": "/media/3_wohn_esszimmer_re_thumbnail_640.jpg",
+    "fileNameThumbnailWebp": "/media/3_wohn_esszimmer_re_thumbnail_640.webp",
+    "fileName": "/media/3_wohn_esszimmer_re_640.jpg",
+    "fileNameWebp": "/media/3_wohn_esszimmer_re_640.webp",
+    "fileType": "jpg",
+    "width": 640
+  },
+  {
+    "fileNameSrc": "/media/4_küchenblock.jpg",
+    "fileNameThumbnail": "/media/4_küchenblock_thumbnail_640.jpg",
+    "fileNameThumbnailWebp": "/media/4_küchenblock_thumbnail_640.webp",
+    "fileName": "/media/4_küchenblock_640.jpg",
+    "fileNameWebp": "/media/4_küchenblock_640.webp",
+    "fileType": "jpg",
+    "width": 640
+  },
+  {
+    "fileNameSrc": "/media/5_kuechenblock_detail.jpg",
+    "fileNameThumbnail": "/media/5_kuechenblock_detail_thumbnail_640.jpg",
+    "fileNameThumbnailWebp": "/media/5_kuechenblock_detail_thumbnail_640.webp",
+    "fileName": "/media/5_kuechenblock_detail_640.jpg",
+    "fileNameWebp": "/media/5_kuechenblock_detail_640.webp",
+    "fileType": "jpg",
+    "width": 640
+  },
+  {
+    "fileNameSrc": "/media/6_vorraum.jpg",
+    "fileNameThumbnail": "/media/6_vorraum_thumbnail_640.jpg",
+    "fileNameThumbnailWebp": "/media/6_vorraum_thumbnail_640.webp",
+    "fileName": "/media/6_vorraum_640.jpg",
+    "fileNameWebp": "/media/6_vorraum_640.webp",
+    "fileType": "jpg",
+    "width": 640
+  },
+  {
+    "fileNameSrc": "/media/7_bad_eingang.jpg",
+    "fileNameThumbnail": "/media/7_bad_eingang_thumbnail_640.jpg",
+    "fileNameThumbnailWebp": "/media/7_bad_eingang_thumbnail_640.webp",
+    "fileName": "/media/7_bad_eingang_640.jpg",
+    "fileNameWebp": "/media/7_bad_eingang_640.webp",
+    "fileType": "jpg",
+    "width": 640
+  },
+  {
+    "fileNameSrc": "/media/8_schlafzimmer.jpg",
+    "fileNameThumbnail": "/media/8_schlafzimmer_thumbnail_640.jpg",
+    "fileNameThumbnailWebp": "/media/8_schlafzimmer_thumbnail_640.webp",
+    "fileName": "/media/8_schlafzimmer_640.jpg",
+    "fileNameWebp": "/media/8_schlafzimmer_640.webp",
+    "fileType": "jpg",
+    "width": 640
+  },
+  {
+    "fileNameSrc": "/media/9_balkon_tuer.jpg",
+    "fileNameThumbnail": "/media/9_balkon_tuer_thumbnail_640.jpg",
+    "fileNameThumbnailWebp": "/media/9_balkon_tuer_thumbnail_640.webp",
+    "fileName": "/media/9_balkon_tuer_640.jpg",
+    "fileNameWebp": "/media/9_balkon_tuer_640.webp",
+    "fileType": "jpg",
+    "width": 640
+  },
+  {
+    "fileNameSrc": "/media/10_balkon.jpg",
+    "fileNameThumbnail": "/media/10_balkon_thumbnail_768.jpg",
+    "fileNameThumbnailWebp": "/media/10_balkon_thumbnail_768.webp",
+    "fileName": "/media/10_balkon_768.jpg",
+    "fileNameWebp": "/media/10_balkon_768.webp",
+    "fileType": "jpg",
+    "width": 768
+  },
+  {
+    "fileNameSrc": "/media/11_eingangsbereich.jpg",
+    "fileNameThumbnail": "/media/11_eingangsbereich_thumbnail_768.jpg",
+    "fileNameThumbnailWebp": "/media/11_eingangsbereich_thumbnail_768.webp",
+    "fileName": "/media/11_eingangsbereich_768.jpg",
+    "fileNameWebp": "/media/11_eingangsbereich_768.webp",
+    "fileType": "jpg",
+    "width": 768
+  },
+  {
+    "fileNameSrc": "/media/1_grundriss.jpg",
+    "fileNameThumbnail": "/media/1_grundriss_thumbnail_768.jpg",
+    "fileNameThumbnailWebp": "/media/1_grundriss_thumbnail_768.webp",
+    "fileName": "/media/1_grundriss_768.jpg",
+    "fileNameWebp": "/media/1_grundriss_768.webp",
+    "fileType": "jpg",
+    "width": 768
+  },
+  {
+    "fileNameSrc": "/media/2_wohn_esszimmer_li.jpg",
+    "fileNameThumbnail": "/media/2_wohn_esszimmer_li_thumbnail_768.jpg",
+    "fileNameThumbnailWebp": "/media/2_wohn_esszimmer_li_thumbnail_768.webp",
+    "fileName": "/media/2_wohn_esszimmer_li_768.jpg",
+    "fileNameWebp": "/media/2_wohn_esszimmer_li_768.webp",
+    "fileType": "jpg",
+    "width": 768
+  },
+  {
+    "fileNameSrc": "/media/3_wohn_esszimmer_re.jpg",
+    "fileNameThumbnail": "/media/3_wohn_esszimmer_re_thumbnail_768.jpg",
+    "fileNameThumbnailWebp": "/media/3_wohn_esszimmer_re_thumbnail_768.webp",
+    "fileName": "/media/3_wohn_esszimmer_re_768.jpg",
+    "fileNameWebp": "/media/3_wohn_esszimmer_re_768.webp",
+    "fileType": "jpg",
+    "width": 768
+  },
+  {
+    "fileNameSrc": "/media/4_küchenblock.jpg",
+    "fileNameThumbnail": "/media/4_küchenblock_thumbnail_768.jpg",
+    "fileNameThumbnailWebp": "/media/4_küchenblock_thumbnail_768.webp",
+    "fileName": "/media/4_küchenblock_768.jpg",
+    "fileNameWebp": "/media/4_küchenblock_768.webp",
+    "fileType": "jpg",
+    "width": 768
+  },
+  {
+    "fileNameSrc": "/media/5_kuechenblock_detail.jpg",
+    "fileNameThumbnail": "/media/5_kuechenblock_detail_thumbnail_768.jpg",
+    "fileNameThumbnailWebp": "/media/5_kuechenblock_detail_thumbnail_768.webp",
+    "fileName": "/media/5_kuechenblock_detail_768.jpg",
+    "fileNameWebp": "/media/5_kuechenblock_detail_768.webp",
+    "fileType": "jpg",
+    "width": 768
+  },
+  {
+    "fileNameSrc": "/media/6_vorraum.jpg",
+    "fileNameThumbnail": "/media/6_vorraum_thumbnail_768.jpg",
+    "fileNameThumbnailWebp": "/media/6_vorraum_thumbnail_768.webp",
+    "fileName": "/media/6_vorraum_768.jpg",
+    "fileNameWebp": "/media/6_vorraum_768.webp",
+    "fileType": "jpg",
+    "width": 768
+  },
+  {
+    "fileNameSrc": "/media/7_bad_eingang.jpg",
+    "fileNameThumbnail": "/media/7_bad_eingang_thumbnail_768.jpg",
+    "fileNameThumbnailWebp": "/media/7_bad_eingang_thumbnail_768.webp",
+    "fileName": "/media/7_bad_eingang_768.jpg",
+    "fileNameWebp": "/media/7_bad_eingang_768.webp",
+    "fileType": "jpg",
+    "width": 768
+  },
+  {
+    "fileNameSrc": "/media/8_schlafzimmer.jpg",
+    "fileNameThumbnail": "/media/8_schlafzimmer_thumbnail_768.jpg",
+    "fileNameThumbnailWebp": "/media/8_schlafzimmer_thumbnail_768.webp",
+    "fileName": "/media/8_schlafzimmer_768.jpg",
+    "fileNameWebp": "/media/8_schlafzimmer_768.webp",
+    "fileType": "jpg",
+    "width": 768
+  },
+  {
+    "fileNameSrc": "/media/9_balkon_tuer.jpg",
+    "fileNameThumbnail": "/media/9_balkon_tuer_thumbnail_768.jpg",
+    "fileNameThumbnailWebp": "/media/9_balkon_tuer_thumbnail_768.webp",
+    "fileName": "/media/9_balkon_tuer_768.jpg",
+    "fileNameWebp": "/media/9_balkon_tuer_768.webp",
+    "fileType": "jpg",
+    "width": 768
+  },
+  {
+    "fileNameSrc": "/media/10_balkon.jpg",
+    "fileNameThumbnail": "/media/10_balkon_thumbnail_1280.jpg",
+    "fileNameThumbnailWebp": "/media/10_balkon_thumbnail_1280.webp",
+    "fileName": "/media/10_balkon_1280.jpg",
+    "fileNameWebp": "/media/10_balkon_1280.webp",
+    "fileType": "jpg",
+    "width": 1280
+  },
+  {
+    "fileNameSrc": "/media/11_eingangsbereich.jpg",
+    "fileNameThumbnail": "/media/11_eingangsbereich_thumbnail_1280.jpg",
+    "fileNameThumbnailWebp": "/media/11_eingangsbereich_thumbnail_1280.webp",
+    "fileName": "/media/11_eingangsbereich_1280.jpg",
+    "fileNameWebp": "/media/11_eingangsbereich_1280.webp",
+    "fileType": "jpg",
+    "width": 1280
+  },
+  {
+    "fileNameSrc": "/media/1_grundriss.jpg",
+    "fileNameThumbnail": "/media/1_grundriss_thumbnail_1280.jpg",
+    "fileNameThumbnailWebp": "/media/1_grundriss_thumbnail_1280.webp",
+    "fileName": "/media/1_grundriss_1280.jpg",
+    "fileNameWebp": "/media/1_grundriss_1280.webp",
+    "fileType": "jpg",
+    "width": 1280
+  },
+  {
+    "fileNameSrc": "/media/2_wohn_esszimmer_li.jpg",
+    "fileNameThumbnail": "/media/2_wohn_esszimmer_li_thumbnail_1280.jpg",
+    "fileNameThumbnailWebp": "/media/2_wohn_esszimmer_li_thumbnail_1280.webp",
+    "fileName": "/media/2_wohn_esszimmer_li_1280.jpg",
+    "fileNameWebp": "/media/2_wohn_esszimmer_li_1280.webp",
+    "fileType": "jpg",
+    "width": 1280
+  },
+  {
+    "fileNameSrc": "/media/3_wohn_esszimmer_re.jpg",
+    "fileNameThumbnail": "/media/3_wohn_esszimmer_re_thumbnail_1280.jpg",
+    "fileNameThumbnailWebp": "/media/3_wohn_esszimmer_re_thumbnail_1280.webp",
+    "fileName": "/media/3_wohn_esszimmer_re_1280.jpg",
+    "fileNameWebp": "/media/3_wohn_esszimmer_re_1280.webp",
+    "fileType": "jpg",
+    "width": 1280
+  },
+  {
+    "fileNameSrc": "/media/4_küchenblock.jpg",
+    "fileNameThumbnail": "/media/4_küchenblock_thumbnail_1280.jpg",
+    "fileNameThumbnailWebp": "/media/4_küchenblock_thumbnail_1280.webp",
+    "fileName": "/media/4_küchenblock_1280.jpg",
+    "fileNameWebp": "/media/4_küchenblock_1280.webp",
+    "fileType": "jpg",
+    "width": 1280
+  },
+  {
+    "fileNameSrc": "/media/5_kuechenblock_detail.jpg",
+    "fileNameThumbnail": "/media/5_kuechenblock_detail_thumbnail_1280.jpg",
+    "fileNameThumbnailWebp": "/media/5_kuechenblock_detail_thumbnail_1280.webp",
+    "fileName": "/media/5_kuechenblock_detail_1280.jpg",
+    "fileNameWebp": "/media/5_kuechenblock_detail_1280.webp",
+    "fileType": "jpg",
+    "width": 1280
+  },
+  {
+    "fileNameSrc": "/media/6_vorraum.jpg",
+    "fileNameThumbnail": "/media/6_vorraum_thumbnail_1280.jpg",
+    "fileNameThumbnailWebp": "/media/6_vorraum_thumbnail_1280.webp",
+    "fileName": "/media/6_vorraum_1280.jpg",
+    "fileNameWebp": "/media/6_vorraum_1280.webp",
+    "fileType": "jpg",
+    "width": 1280
+  },
+  {
+    "fileNameSrc": "/media/7_bad_eingang.jpg",
+    "fileNameThumbnail": "/media/7_bad_eingang_thumbnail_1280.jpg",
+    "fileNameThumbnailWebp": "/media/7_bad_eingang_thumbnail_1280.webp",
+    "fileName": "/media/7_bad_eingang_1280.jpg",
+    "fileNameWebp": "/media/7_bad_eingang_1280.webp",
+    "fileType": "jpg",
+    "width": 1280
+  },
+  {
+    "fileNameSrc": "/media/8_schlafzimmer.jpg",
+    "fileNameThumbnail": "/media/8_schlafzimmer_thumbnail_1280.jpg",
+    "fileNameThumbnailWebp": "/media/8_schlafzimmer_thumbnail_1280.webp",
+    "fileName": "/media/8_schlafzimmer_1280.jpg",
+    "fileNameWebp": "/media/8_schlafzimmer_1280.webp",
+    "fileType": "jpg",
+    "width": 1280
+  },
+  {
+    "fileNameSrc": "/media/9_balkon_tuer.jpg",
+    "fileNameThumbnail": "/media/9_balkon_tuer_thumbnail_1280.jpg",
+    "fileNameThumbnailWebp": "/media/9_balkon_tuer_thumbnail_1280.webp",
+    "fileName": "/media/9_balkon_tuer_1280.jpg",
+    "fileNameWebp": "/media/9_balkon_tuer_1280.webp",
+    "fileType": "jpg",
+    "width": 1280
+  }
+]

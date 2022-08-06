@@ -11,7 +11,7 @@
     "lint-no-fix": "eslint 'src/**/*.{js,ts,vue}'",
     "build": "astro build",
     "preview": "astro preview",
-    "optimize-images": "rm -rf public/media/* && ./image-optimizer --source ./media/ --destination public/media --prefix /media --widths 640 768 1280 --qualities 90 90 90 --webpimage true --thumbnail true --jsonfile media.json"
+    "optimize-images": "rm -rf public/media/* && ./image-optimizer --source ./media/ --destination public/media --prefix /media --widths 640 768 1280 --qualities 90 90 90 --webpimage true --thumbnail true --jsonfile media.json && cp public/media.json"
   },
   "dependencies": {
     "astro": "^1.0.0-rc.7",
