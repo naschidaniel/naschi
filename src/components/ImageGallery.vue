@@ -28,13 +28,12 @@
 <script setup lang="ts">
 import { ref, computed, ComputedRef } from "vue";
 import { ResponsiveSource, OptimizedImage, Gallery } from "../model/image";
+import { getResponsiveSource } from "../util/getResponsiveSource";
 import _gallery from "../media/gallery.json";
 import _optimizedImages from "../media/media.json";
 
 const gallery = _gallery as Gallery[];
 const optimizedImages = _optimizedImages as OptimizedImage[];
-
-const gitsha = import.meta.env.VITE_APP_GITSHA;
 
 const count = ref(0);
 function navigate(change: number) {
@@ -45,38 +44,6 @@ function navigate(change: number) {
       : newValue === -1
       ? (count.value = gallery.length - 1)
       : count.value + change;
-}
-
-function getResponsiveSource(
-  alt: string,
-  isThumbnail: boolean,
-  optimizedImages: OptimizedImage[],
-  title: string
-): ResponsiveSource {
-  return {
-    alt,
-    height: 123, // TODO Dummy Value
-    sizes: optimizedImages
-      .map((i) => `(max-width: ${i.width}px) ${i.width}px`)
-      .join(", "),
-    src: optimizedImages.find((i) => i.width === 1280).fileNameSrc,
-    srcset: optimizedImages
-      .map((i) =>
-        isThumbnail
-          ? `${i.fileNameThumbnail}?v=${gitsha} ${i.width}w`
-          : `${i.fileName}?v=${gitsha} ${i.width}w`
-      )
-      .join(", "),
-    srcsetWebp: optimizedImages
-      .map((i) =>
-        isThumbnail
-          ? `${i.fileNameThumbnailWebp}?v=${gitsha} ${i.width}w`
-          : `${i.fileNameWebp}?v=${gitsha} ${i.width}w`
-      )
-      .join(", "),
-    title,
-    width: 1234,
-  };
 }
 
 const selectedImage: ComputedRef<ResponsiveSource> = computed(() => {
