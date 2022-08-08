@@ -2,7 +2,7 @@ export interface Gallery {
   fileNameSrc: string;
   alt: string;
   title: string;
-  isThumbnail?: false;
+  isThumbnail?: boolean;
 }
 
 export interface ResponsiveSource {

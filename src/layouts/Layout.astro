@@ -196,7 +196,7 @@ const { title } = Astro.props as Props;
 
   @media only screen and (min-width: 600px) {
     .container {
-      max-width: 75%;
+      max-width: 90%;
     }
     .main {
       margin-top: 10em;
@@ -206,6 +206,24 @@ const { title } = Astro.props as Props;
     }
     .md-d-none {
       display: none;
+    }
+  }
+
+  @media only screen and (min-width: 1000px) {
+    .container {
+      max-width: 95%;
+    }
+  }
+
+  @media only screen and (min-width: 1600px) {
+    .container {
+      max-width: 85%;
+    }
+  }
+
+  @media only screen and (min-width: 1600px) {
+    .container {
+      max-width: 75%;
     }
   }
 

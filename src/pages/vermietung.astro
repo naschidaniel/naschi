@@ -6,11 +6,21 @@ import ImageGallery from "../components/ImageGallery.vue";
 
 <Layout title="naschi.at – Vermietung">
   <h1>Vermietung</h1>
-  <ImageGallery client:idle />
-  <h2>Objektstandort</h2>
-  <LeafletMap client:idle />
+  Top 9, Anton-Lippe-Platz 3, A-8041 Graz
+
   <div class="flex-container">
-    <div>
+    <div class="basic-map-gallery">
+      <h2>Objektstandort</h2>
+      <LeafletMap client:idle />
+    </div>
+    <div class="basic-map-gallery">
+      <h2>Bildergalerie</h2>
+      <ImageGallery client:idle />
+    </div>
+  </div>
+
+  <div class="grid-container">
+    <div class="grid-item">
       <h2>Objektinformationen</h2>
       <table>
         <tr>
@@ -55,8 +65,7 @@ import ImageGallery from "../components/ImageGallery.vue";
         </tr>
       </table>
     </div>
-
-    <div>
+    <div class="grid-item">
       <h2>Raumaufteilung</h2>
       <table>
         <tr>
@@ -85,22 +94,24 @@ import ImageGallery from "../components/ImageGallery.vue";
         </tr>
       </table>
     </div>
-    <div>
-      <h2>Energieausweis/Heizung</h2>
-      <table>
-        <tr>
-          <td>HWB (kWh/m²/Jahr)</td>
-          <td>42,6</td>
-        </tr>
-        <tr>
-          <td>HWB Energieklasse</td>
-          <td>B</td>
-        </tr>
-        <tr>
-          <td>Heizung</td>
-          <td>Zentralheizung</td>
-        </tr>
-      </table>
+    <div class="grid-item">
+      <div>
+        <h2>Energieausweis/Heizung</h2>
+        <table>
+          <tr>
+            <td>HWB (kWh/m²/Jahr)</td>
+            <td>42,6</td>
+          </tr>
+          <tr>
+            <td>HWB Energieklasse</td>
+            <td>B</td>
+          </tr>
+          <tr>
+            <td>Heizung</td>
+            <td>Zentralheizung</td>
+          </tr>
+        </table>
+      </div>
     </div>
   </div>
 
@@ -153,33 +164,40 @@ import ImageGallery from "../components/ImageGallery.vue";
     </strong> Für die Wohnung sind drei Monatsmieten im Ausmaß von EUR 2157,00 fällig.
   </p>
 
-  <h2>Lage</h2>
-  <ul>
-    <li>Region: Bezirk Jakomini</li>
-    <li>
-      Perfekter Anschluss an den öffentlichen Verkehr und an den Radweg.
-      Geschäfte des täglichen Bedarfs befinden sich in unmittelbarer Nähe.
-    </li>
-  </ul>
-
-  <h2>Ausstattung</h2>
-  <ul>
-    <li>Eichen Parkett im Wohn-Essberich und Schlafzimmer</li>
-    <li>Fließenboden im Bad und Vorraum</li>
-    <li>Anschlus für Internet und Kabel TV</li>
-    <li>
-      Einbauküche: Geschirrspüler Herd, Kochfeld, Kühl-/ Gefrierschrank Kombi
-    </li>
-    <li>Zentralheizung</li>
-    <li>Baujahr 2021</li>
-  </ul>
-
-  <h2>Kostenaufstellung</h2>
-  <ul>
-    <li>Mietzins EUR 535,00 pro Monat</li>
-    <li>Betriebskosten Akontozahlung EUR 184,00 pro Monat</li>
-    <li>Kaution EUR 2157,00</li>
-  </ul>
+  <div class="grid-container">
+    <div class="grid-item">
+      <h3>Lage</h3>
+      <ul>
+        <li>Region: Bezirk Jakomini</li>
+        <li>
+          Perfekter Anschluss an den öffentlichen Verkehr und an den Radweg.
+          Geschäfte des täglichen Bedarfs befinden sich in unmittelbarer Nähe.
+        </li>
+      </ul>
+    </div>
+    <div class="grid-item">
+      <h3>Ausstattung</h3>
+      <ul>
+        <li>Eichen Parkett im Wohn-Essberich und Schlafzimmer</li>
+        <li>Fließenboden im Bad und Vorraum</li>
+        <li>Anschlus für Internet und Kabel TV</li>
+        <li>
+          Einbauküche: Geschirrspüler Herd, Kochfeld, Kühl-/ Gefrierschrank
+          Kombi
+        </li>
+        <li>Zentralheizung</li>
+        <li>Baujahr 2021</li>
+      </ul>
+    </div>
+    <div class="grid-item">
+      <h3>Kostenaufstellung</h3>
+      <ul>
+        <li>Mietzins EUR 535,00 pro Monat</li>
+        <li>Betriebskosten Akontozahlung EUR 184,00 pro Monat</li>
+        <li>Kaution EUR 2157,00</li>
+      </ul>
+    </div>
+  </div>
 </Layout>
 
 <style>
@@ -187,26 +205,43 @@ import ImageGallery from "../components/ImageGallery.vue";
     display: flex;
     flex-wrap: wrap;
   }
-
-  .flex-container > div {
-    width: 32%;
-  }
-
-  .flex-container > div > table {
+  .basic-map-gallery {
     width: 100%;
   }
 
-  .flex-container > div > table > tr > td {
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .grid-item {
+    padding: 10px;
+    text-align: left;
+  }
+
+  .grid-item > table {
+    width: 100%;
+  }
+
+  .grid-item > table > tr > td {
     width: 50%;
   }
 
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (min-width: 750px) {
+    .grid-container {
+      grid-template-columns: auto auto;
+    }
+  }
+
+  @media only screen and (min-width: 1000px) {
     .flex-container {
       display: inline;
     }
+    .basic-map-gallery {
+      width: 48%;
+    }
 
-    .flex-container > div {
-      width: 100%;
+    .grid-container {
+      grid-template-columns: auto auto auto;
     }
   }
 </style>
