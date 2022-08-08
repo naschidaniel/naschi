@@ -1,28 +1,53 @@
 <template>
-  <div class="flex-container">
-    <div><button title="Back" @click="navigate(-1)">❰</button></div>
-    <div @click="navigate(1)">
-      <picture>
-        <source
-          :sizes="selectedImage.sizes"
-          :srcset="selectedImage.srcsetWebp"
-          type="image/webp"
-        />
-        <source :srcset="selectedImage.srcset" type="image/jpeg" />
-        <img
-          :src="selectedImage.src"
-          height="100%"
-          width="100%"
-          :title="selectedImage.title"
-        />
-      </picture>
+  <div>
+    <picture>
+      <source
+        :sizes="selectedImage.sizes"
+        :srcset="selectedImage.srcsetWebp"
+        type="image/webp"
+      />
+      <source :srcset="selectedImage.srcset" type="image/jpeg" />
+      <img
+        :src="selectedImage.src"
+        height="100%"
+        width="100%"
+        :title="selectedImage.title"
+      />
+    </picture>
+    <div class="flex-container">
+      <div><button title="Back" @click="navigate(-1)">❰</button></div>
+      <div v-for="(item, index) in gallery" :key="item.fileNameSrc">
+        <picture
+          style="cursor: pointer"
+          :style="index === count ? 'opacity: 100%;' : 'opacity: 30%;'"
+          @click="count = index"
+        >
+          <source
+            :srcset="
+              getResponsiveSource('', true, filteredMedia(item.fileNameSrc), '')
+                .srcsetWebp
+            "
+            type="image/webp"
+          />
+          <source :srcset="selectedImage.srcset" type="image/jpeg" />
+          <img
+            :srcset="
+              getResponsiveSource('', true, filteredMedia(item.fileNameSrc), '')
+                .src
+            "
+            height="100%"
+            width="100%"
+            :title="selectedImage.title"
+          />
+        </picture>
+      </div>
+      <div><button title="Next" @click="navigate(1)">❱</button></div>
     </div>
-    <div><button title="Next" @click="navigate(1)">❱</button></div>
-  </div>
-  <div class="flex-container">
-    <p>
-      {{ selectedImage.alt }}
-    </p>
+    <div class="flex-container">
+      <p>
+        {{ selectedImage.alt }}
+      </p>
+    </div>
   </div>
 </template>
 <script setup lang="ts">
@@ -46,21 +71,28 @@ function navigate(change: number) {
       : count.value + change;
 }
 
+function filteredMedia(fileNameSrc: string) {
+  return optimizedImages.filter((o) => fileNameSrc === o.fileNameSrc);
+}
+
 const selectedImage: ComputedRef<ResponsiveSource> = computed(() => {
   const alt = gallery[count.value].alt;
-  const filteredMedia = optimizedImages.filter(
-    (o) => gallery[count.value].fileNameSrc === o.fileNameSrc
-  );
+
   const title = gallery[count.value].title;
   const isThumbnail = gallery[count.value].isThumbnail;
-  return getResponsiveSource(alt, isThumbnail, filteredMedia, title);
+  return getResponsiveSource(
+    alt,
+    isThumbnail,
+    filteredMedia(gallery[count.value].fileNameSrc),
+    title
+  );
 });
 </script>
 
 <style>
 .flex-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .flex-container > div {
@@ -69,17 +101,10 @@ const selectedImage: ComputedRef<ResponsiveSource> = computed(() => {
 
 button {
   position: relative;
-  min-height: 100%;
   background-color: #303030;
   border: none;
   color: white;
   padding: 15px;
   font-size: 16px;
-}
-
-@media only screen and (max-width: 600px) {
-  button {
-    padding: 5px;
-  }
 }
 </style>
