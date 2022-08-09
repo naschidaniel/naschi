@@ -29,3 +29,4 @@ image-optimizer.exe
 
 # optimized images
 public/media
+src/media/media.json
