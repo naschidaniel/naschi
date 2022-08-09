@@ -1,0 +1,240 @@
+---
+import Layout from "../layouts/Layout.astro";
+import LeafletMap from "../components/LeafletMap.astro";
+import ImageGallery from "../components/ImageGallery.vue";
+---
+
+<Layout title="naschi.at – Vermietung">
+  <h1>Vermietung</h1>
+
+  <h2>Objektbeschreibung</h2>
+  <p>
+    In zentraler Lage im <strong>Bezirk Jakomini</strong> sucht eine <strong
+      >45,2 m² große Wohnung
+    </strong> am <strong>Anton-Lippe-Platz 3</strong> einen neuen Mieter. Durch das
+    nach <strong>Süd-West ausgerichtete Gebäude</strong> wird die Wohnung mit viel
+    Tageslicht durchflutet. Die Wohnung hat eine <strong
+      >10,3 m² großen Balkon
+    </strong>, welcher nach Süden ausgerichtet ist und sich in einem Innenhof
+    befindet. Im großräumigen Wohn- Essbereich (25,8 m²) befindet sich eine
+    neuwertige <strong
+      >Einbauküche mit Einbauherd, Kochfeld, Einbau Kühl-/ Gefrierschrank Kombi
+      und vollintegriertem Geschirrspüler
+    </strong>. Im Bad befinden sich die Toilette, eine Dusche, ein Waschbecken
+    mit Spiegel, ein Fenster zum lüften und ein Waschmaschinenanschluss. Das
+    Schlafzimmer ist nach Nord-Ost ausgerichtet und zeichnet sich durch seine
+    Ruhe in der Nacht aus.
+  </p>
+
+  <p>
+    Die Wohnanlage wurde im <strong
+      >September 2021 fertiggestellt hat 13 Wohneinheiten
+    </strong>. In der Wohnanlage gibt es einen Aufzug und zur Wohnung ist ein
+    Kellerabteil mit 2,9 m² zugeordnet.
+  </p>
+
+  <p>
+    Einkaufsmöglichkeiten für den täglichen Bedarf, Kinderbetreuung und Schulen
+    findet man im nahen Umfeld. Der Campus Inffeldgasse der TU Graz ist mit dem
+    Fahrrad in 6 Minuten erreichbar. Der <strong
+      >Anschluss an den öffentlichen Verkehr
+    </strong> (Straßenbahnlinie 4, 10 Minuten zum Grazer Hauptbahnhof) ist perfekt
+    und auch die Liebenauer Tangente beginnt in einer Entfernung von nur 400 Meter.
+  </p>
+
+  <h3>Kostenaufstellung</h3>
+  <p>
+    Die <strong>Mietzins</strong> für die Wohnung beträgt <strong
+      >EUR 535,00 pro Monat
+    </strong>. Die
+    <strong>Betriebskosten</strong> für die Wohnung sind <strong
+      >rund EUR 184,00 pro Monat
+    </strong> und sind als Akontozahlung zu bezahlen. Die tatsächlichen Betriebskosten
+    werden auf Basis der Jahresbrechung berechnet. <strong
+      >Für die Wohnung ergibt sich somit ein Überweisungsbetrag von EUR 719,00
+      pro Monat.
+    </strong> Für die Wohnung sind drei Monatsmieten im Ausmaß von EUR 2157,00 fällig.
+  </p>
+
+  <div class="basic-map-gallery-container">
+    <div class="basic-map-gallery">
+      <h2>Bildergalerie</h2>
+      <ImageGallery client:idle />
+    </div>
+    <div class="basic-map-gallery">
+      <h2>Objektstandort</h2>
+      <LeafletMap client:idle />
+    </div>
+  </div>
+
+  <div class="grid-container">
+    <div class="grid-item">
+      <h2>Objektinformationen</h2>
+      <table>
+        <tr>
+          <td>Straße</td>
+          <td>Anton-Lippe-Platz 3</td>
+        </tr>
+        <tr>
+          <td>PLZ</td>
+          <td>A-8041 Graz</td>
+        </tr>
+        <tr>
+          <td>Bautyp</td>
+          <td>Neubau 2021</td>
+        </tr>
+        <tr>
+          <td>Zustand</td>
+          <td>Neuwertig</td>
+        </tr>
+        <tr>
+          <td>Wohnfläche</td>
+          <td>45,21 m²</td>
+        </tr>
+        <tr>
+          <td>Balkon</td>
+          <td>10,30 m²</td>
+        </tr>
+        <tr>
+          <td>Zimmer</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Stockwerk</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>Fahrstuhl</td>
+          <td>✔️</td>
+        </tr>
+        <tr>
+          <td>Einbauküche</td>
+          <td>✔️</td>
+        </tr>
+      </table>
+    </div>
+    <div class="grid-item">
+      <h2>Raumaufteilung</h2>
+      <table>
+        <tr>
+          <td>Wohn-Essberich</td>
+          <td>25,80 m²</td>
+        </tr>
+        <tr>
+          <td>Vorraum</td>
+          <td>2,59m²</td>
+        </tr>
+        <tr>
+          <td>Bad/WC</td>
+          <td>4,26m²</td>
+        </tr>
+        <tr>
+          <td>Zimmer</td>
+          <td>11,10 m²</td>
+        </tr>
+        <tr>
+          <td>Balkon/Terasse</td>
+          <td>10,30 m²</td>
+        </tr>
+        <tr>
+          <td>Kellerabteil</td>
+          <td>2,98 m²</td>
+        </tr>
+      </table>
+    </div>
+    <div class="grid-item">
+      <h2>Energieausweis/Heizung</h2>
+      <table>
+        <tr>
+          <td>HWB (kWh/m²/Jahr)</td>
+          <td>42,6</td>
+        </tr>
+        <tr>
+          <td>HWB Energieklasse</td>
+          <td>B</td>
+        </tr>
+        <tr>
+          <td>Heizung</td>
+          <td>Zentralheizung</td>
+        </tr>
+      </table>
+    </div>
+    <div class="grid-item">
+      <h2>Lage</h2>
+      <ul>
+        <li>Region: Bezirk Jakomini</li>
+        <li>
+          Perfekter Anschluss an den öffentlichen Verkehr und an den Radweg.
+          Geschäfte des täglichen Bedarfs befinden sich in unmittelbarer Nähe.
+        </li>
+      </ul>
+    </div>
+    <div class="grid-item">
+      <h2>Ausstattung</h2>
+      <ul>
+        <li>Eichen Parkett im Wohn-Essberich und Schlafzimmer</li>
+        <li>Fließenboden im Bad und Vorraum</li>
+        <li>Anschlus für Internet und Kabel TV</li>
+        <li>
+          Einbauküche: Geschirrspüler Herd, Kochfeld, Kühl-/ Gefrierschrank
+          Kombi
+        </li>
+        <li>Zentralheizung</li>
+        <li>Baujahr 2021</li>
+      </ul>
+    </div>
+    <div class="grid-item">
+      <h2>Kostenaufstellung</h2>
+      <ul>
+        <li>Mietzins EUR 535,00 pro Monat</li>
+        <li>Betriebskosten Akontozahlung EUR 184,00 pro Monat</li>
+        <li>Kaution EUR 2157,00</li>
+      </ul>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .basic-map-gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .basic-map-gallery {
+    width: 100%;
+    padding: 0px;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .grid-item {
+    padding: 10px;
+    text-align: left;
+  }
+
+  .grid-item > table {
+    width: 100%;
+  }
+
+  .grid-item > table > tr > td {
+    width: 50%;
+  }
+
+  @media only screen and (min-width: 750px) {
+    .grid-container {
+      grid-template-columns: auto auto;
+    }
+  }
+
+  @media only screen and (min-width: 1000px) {
+    .basic-map-gallery {
+      width: 48%;
+      padding: 9px;
+    }
+
+    .grid-container {
+      grid-template-columns: auto auto auto;
+    }
+  }
+</style>

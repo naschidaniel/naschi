@@ -20,5 +20,9 @@ jobs:
         run: yarn
       - name: lint
         run: yarn lint-no-fix
+      - name: get image-optimizer
+        run: curl -L https://github.com/naschidaniel/image-optimizer/releases/download/v0.5.0/image-optimizer-linux --output image-optimizer && chmod +x image-optimizer
+      - name: optimize images
+        run: yarn optimize-images
       - name: build
         run: yarn build

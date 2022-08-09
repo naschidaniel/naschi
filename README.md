@@ -9,6 +9,14 @@ Visit my personal website [https://naschi.at](https://naschi.at).
 yarn
 ```
 
+## Optimize Images for Development and Production
+
+Place the v0.5.0 release of the [image-optimizer](https://github.com/naschidaniel/image-optimizer) for your system in the root directory. For local development, the original images are used.
+
+```
+yarn optimize-images
+```
+
 ### Development
 #### Compiles and hot-reloads for development
 ```

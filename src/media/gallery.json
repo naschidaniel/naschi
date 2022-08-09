@@ -1,0 +1,58 @@
+[
+  {
+    "fileNameSrc": "/media/1_grundriss.jpg",
+    "alt": "Grundrissplan von der Wohnung",
+    "title": "Grundrissplan von der Wohnung"
+  },
+  {
+    "fileNameSrc": "/media/2_wohn_esszimmer_li.jpg",
+    "alt": "Wohn- Essbereich von links fotografiert",
+    "title": "Wohn- Essbereich"
+  },
+  {
+    "fileNameSrc": "/media/3_wohn_esszimmer_re.jpg",
+    "alt": "Wohn- Essbereich von rechts fotografiert",
+    "title": "Wohn- Essbereich"
+  },
+  {
+    "fileNameSrc": "/media/4_kuechenblock.jpg",
+    "alt": "Küchenblock",
+    "title": "Küchenblock"
+  },
+  {
+    "fileNameSrc": "/media/5_kuechenblock_detail.jpg",
+    "alt": "Küchenblock Detailansicht",
+    "title": "Küchenblock"
+  },
+  {
+    "fileNameSrc": "/media/6_vorraum.jpg",
+    "alt": "Vorraum",
+    "title": "Vorraum"
+  },
+  {
+    "fileNameSrc": "/media/7_bad_eingang.jpg",
+    "alt": "Bad WC Dusche",
+    "title": "Bad"
+  },
+  {
+    "fileNameSrc": "/media/8_schlafzimmer.jpg",
+    "alt": "Schlafzimmer",
+    "title": "Schlafzimmer"
+  },
+  {
+    "fileNameSrc": "/media/9_balkon_tuer.jpg",
+    "alt": "Balkontür",
+    "title": "Balkontür"
+
+  },
+  {
+    "fileNameSrc": "/media/10_balkon.jpg",
+    "alt": "Balkon in Sicht in den Innenhof",
+    "title": "Balkon"
+  },
+  {
+    "fileNameSrc": "/media/11_eingangsbereich.jpg",
+    "alt": "Eingangsberich",
+    "title": "Eingangsberich"
+  }
+]
