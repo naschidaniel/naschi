@@ -6,114 +6,6 @@ import ImageGallery from "../components/ImageGallery.vue";
 
 <Layout title="naschi.at – Vermietung">
   <h1>Vermietung</h1>
-  Top 9, Anton-Lippe-Platz 3, A-8041 Graz
-
-  <div class="flex-container">
-    <div class="basic-map-gallery">
-      <h2>Objektstandort</h2>
-      <LeafletMap client:idle />
-    </div>
-    <div class="basic-map-gallery">
-      <h2>Bildergalerie</h2>
-      <ImageGallery client:idle />
-    </div>
-  </div>
-
-  <div class="grid-container">
-    <div class="grid-item">
-      <h2>Objektinformationen</h2>
-      <table>
-        <tr>
-          <td>Bautyp</td>
-          <td>Neubau 2021</td>
-        </tr>
-        <tr>
-          <td>Zustand</td>
-          <td>Neuwertig</td>
-        </tr>
-        <tr>
-          <td>Wohnfläche</td>
-          <td>45,21 m²</td>
-        </tr>
-        <tr>
-          <td>Balkon</td>
-          <td>10,30 m²</td>
-        </tr>
-        <tr>
-          <td>Zimmer</td>
-          <td>1</td>
-        </tr>
-        <tr>
-          <td>Stockwerk</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td>Heizung</td>
-          <td>Zentralheizung</td>
-        </tr>
-        <tr>
-          <td>Einbauküche</td>
-          <td>✔️</td>
-        </tr>
-        <tr>
-          <td>Keller</td>
-          <td>✔️</td>
-        </tr>
-        <tr>
-          <td>Fahrstuhl</td>
-          <td>✔️</td>
-        </tr>
-      </table>
-    </div>
-    <div class="grid-item">
-      <h2>Raumaufteilung</h2>
-      <table>
-        <tr>
-          <td>Wohn-Essberich</td>
-          <td>25,80 m²</td>
-        </tr>
-        <tr>
-          <td>Vorraum</td>
-          <td>2,59m²</td>
-        </tr>
-        <tr>
-          <td>Bad/WC</td>
-          <td>4,26m²</td>
-        </tr>
-        <tr>
-          <td>Zimmer</td>
-          <td>11,10 m²</td>
-        </tr>
-        <tr>
-          <td>Balkon/Terasse</td>
-          <td>10,30 m²</td>
-        </tr>
-        <tr>
-          <td>Kellerabteil</td>
-          <td>2,98 m²</td>
-        </tr>
-      </table>
-    </div>
-    <div class="grid-item">
-      <div>
-        <h2>Energieausweis/Heizung</h2>
-        <table>
-          <tr>
-            <td>HWB (kWh/m²/Jahr)</td>
-            <td>42,6</td>
-          </tr>
-          <tr>
-            <td>HWB Energieklasse</td>
-            <td>B</td>
-          </tr>
-          <tr>
-            <td>Heizung</td>
-            <td>Zentralheizung</td>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </div>
 
   <h2>Objektbeschreibung</h2>
   <p>
@@ -164,9 +56,111 @@ import ImageGallery from "../components/ImageGallery.vue";
     </strong> Für die Wohnung sind drei Monatsmieten im Ausmaß von EUR 2157,00 fällig.
   </p>
 
+  <div class="basic-map-gallery-container">
+    <div class="basic-map-gallery">
+      <h2>Bildergalerie</h2>
+      <ImageGallery client:idle />
+    </div>
+    <div class="basic-map-gallery">
+      <h2>Objektstandort</h2>
+      <LeafletMap client:idle />
+    </div>
+  </div>
+
   <div class="grid-container">
     <div class="grid-item">
-      <h3>Lage</h3>
+      <h2>Objektinformationen</h2>
+      <table>
+        <tr>
+          <td>Straße</td>
+          <td>Anton-Lippe-Platz 3</td>
+        </tr>
+        <tr>
+          <td>PLZ</td>
+          <td>A-8041 Graz</td>
+        </tr>
+        <tr>
+          <td>Bautyp</td>
+          <td>Neubau 2021</td>
+        </tr>
+        <tr>
+          <td>Zustand</td>
+          <td>Neuwertig</td>
+        </tr>
+        <tr>
+          <td>Wohnfläche</td>
+          <td>45,21 m²</td>
+        </tr>
+        <tr>
+          <td>Balkon</td>
+          <td>10,30 m²</td>
+        </tr>
+        <tr>
+          <td>Zimmer</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Stockwerk</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>Fahrstuhl</td>
+          <td>✔️</td>
+        </tr>
+        <tr>
+          <td>Einbauküche</td>
+          <td>✔️</td>
+        </tr>
+      </table>
+    </div>
+    <div class="grid-item">
+      <h2>Raumaufteilung</h2>
+      <table>
+        <tr>
+          <td>Wohn-Essberich</td>
+          <td>25,80 m²</td>
+        </tr>
+        <tr>
+          <td>Vorraum</td>
+          <td>2,59m²</td>
+        </tr>
+        <tr>
+          <td>Bad/WC</td>
+          <td>4,26m²</td>
+        </tr>
+        <tr>
+          <td>Zimmer</td>
+          <td>11,10 m²</td>
+        </tr>
+        <tr>
+          <td>Balkon/Terasse</td>
+          <td>10,30 m²</td>
+        </tr>
+        <tr>
+          <td>Kellerabteil</td>
+          <td>2,98 m²</td>
+        </tr>
+      </table>
+    </div>
+    <div class="grid-item">
+      <h2>Energieausweis/Heizung</h2>
+      <table>
+        <tr>
+          <td>HWB (kWh/m²/Jahr)</td>
+          <td>42,6</td>
+        </tr>
+        <tr>
+          <td>HWB Energieklasse</td>
+          <td>B</td>
+        </tr>
+        <tr>
+          <td>Heizung</td>
+          <td>Zentralheizung</td>
+        </tr>
+      </table>
+    </div>
+    <div class="grid-item">
+      <h2>Lage</h2>
       <ul>
         <li>Region: Bezirk Jakomini</li>
         <li>
@@ -176,7 +170,7 @@ import ImageGallery from "../components/ImageGallery.vue";
       </ul>
     </div>
     <div class="grid-item">
-      <h3>Ausstattung</h3>
+      <h2>Ausstattung</h2>
       <ul>
         <li>Eichen Parkett im Wohn-Essberich und Schlafzimmer</li>
         <li>Fließenboden im Bad und Vorraum</li>
@@ -190,7 +184,7 @@ import ImageGallery from "../components/ImageGallery.vue";
       </ul>
     </div>
     <div class="grid-item">
-      <h3>Kostenaufstellung</h3>
+      <h2>Kostenaufstellung</h2>
       <ul>
         <li>Mietzins EUR 535,00 pro Monat</li>
         <li>Betriebskosten Akontozahlung EUR 184,00 pro Monat</li>
@@ -201,12 +195,13 @@ import ImageGallery from "../components/ImageGallery.vue";
 </Layout>
 
 <style>
-  .flex-container {
+  .basic-map-gallery-container {
     display: flex;
     flex-wrap: wrap;
   }
   .basic-map-gallery {
     width: 100%;
+    padding: 0px;
   }
 
   .grid-container {
@@ -233,11 +228,9 @@ import ImageGallery from "../components/ImageGallery.vue";
   }
 
   @media only screen and (min-width: 1000px) {
-    .flex-container {
-      display: inline;
-    }
     .basic-map-gallery {
       width: 48%;
+      padding: 9px;
     }
 
     .grid-container {

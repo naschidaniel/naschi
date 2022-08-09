@@ -14,36 +14,56 @@
         :title="selectedImage.title"
       />
     </picture>
-    <div class="flex-container">
+    <div class="thumbnails-container">
       <div><button title="Back" @click="navigate(-1)">❰</button></div>
-      <div v-for="(item, index) in gallery" :key="item.fileNameSrc">
-        <picture
-          style="cursor: pointer"
-          :style="index === count ? 'opacity: 100%;' : 'opacity: 30%;'"
-          @click="count = index"
-        >
-          <source
-            :srcset="
-              getResponsiveSource('', true, filteredMedia(item.fileNameSrc), '')
-                .srcsetWebp
-            "
-            type="image/webp"
-          />
-          <source :srcset="selectedImage.srcset" type="image/jpeg" />
-          <img
-            :srcset="
-              getResponsiveSource('', true, filteredMedia(item.fileNameSrc), '')
-                .src
-            "
-            height="100%"
-            width="100%"
-            :title="selectedImage.title"
-          />
-        </picture>
+      <div
+        v-for="(item, index) in gallery"
+        :key="item.fileNameSrc"
+        class="thumbnails"
+      >
+        <div class="md-d-none">
+          <span
+            :style="index === count ? 'opacity: 100%;' : 'opacity: 30%;'"
+            class="dot"
+          ></span>
+        </div>
+        <div class="sm-d-none">
+          <picture
+            style="cursor: pointer; align-self: center"
+            :style="index === count ? 'opacity: 100%;' : 'opacity: 30%;'"
+            @click="count = index"
+          >
+            <source
+              :srcset="
+                getResponsiveSource(
+                  '',
+                  true,
+                  filteredMedia(item.fileNameSrc),
+                  ''
+                ).srcsetWebp
+              "
+              type="image/webp"
+            />
+            <source :srcset="selectedImage.srcset" type="image/jpeg" />
+            <img
+              :srcset="
+                getResponsiveSource(
+                  '',
+                  true,
+                  filteredMedia(item.fileNameSrc),
+                  ''
+                ).src
+              "
+              height="100%"
+              width="100%"
+              :title="selectedImage.title"
+            />
+          </picture>
+        </div>
       </div>
       <div><button title="Next" @click="navigate(1)">❱</button></div>
     </div>
-    <div class="flex-container">
+    <div class="thumbnails-container">
       <p>
         {{ selectedImage.alt }}
       </p>
@@ -89,14 +109,27 @@ const selectedImage: ComputedRef<ResponsiveSource> = computed(() => {
 });
 </script>
 
-<style>
-.flex-container {
+<style scoped>
+.thumbnails-container {
   display: flex;
   justify-content: space-between;
 }
 
-.flex-container > div {
-  padding: 5px;
+.thumbnails-container > div {
+  padding: 2px;
+  align-self: center;
+}
+
+.thumbnails {
+  align-self: center;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
 }
 
 button {

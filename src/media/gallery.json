@@ -2,8 +2,7 @@
   {
     "fileNameSrc": "/media/1_grundriss.jpg",
     "alt": "Grundrissplan von der Wohnung",
-    "title": "Grundrissplan von der Wohnung",
-    "isThumbnail": true
+    "title": "Grundrissplan von der Wohnung"
   },
   {
     "fileNameSrc": "/media/2_wohn_esszimmer_li.jpg",
@@ -16,7 +15,7 @@
     "title": "Wohn- Essbereich"
   },
   {
-    "fileNameSrc": "/media/4_küchenblock.jpg",
+    "fileNameSrc": "/media/4_kuechenblock.jpg",
     "alt": "Küchenblock",
     "title": "Küchenblock"
   },
@@ -33,8 +32,7 @@
   {
     "fileNameSrc": "/media/7_bad_eingang.jpg",
     "alt": "Bad WC Dusche",
-    "title": "Bad",
-    "isThumbnail": true
+    "title": "Bad"
   },
   {
     "fileNameSrc": "/media/8_schlafzimmer.jpg",
@@ -44,8 +42,7 @@
   {
     "fileNameSrc": "/media/9_balkon_tuer.jpg",
     "alt": "Balkontür",
-    "title": "Balkontür",
-    "isThumbnail": true
+    "title": "Balkontür"
 
   },
   {
