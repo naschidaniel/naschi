@@ -116,7 +116,7 @@ const { title } = Astro.props as Props;
         <slot />
       </div>
     </main>
-    <footer>
+    <footer class="no-print">
       <div style="text-align: center">
         <a href="/">Home</a>
         <span class="spacer">–</span>
@@ -239,5 +239,25 @@ const { title } = Astro.props as Props;
       margin-left: 0.7em;
       margin-right: 0.7em;
     }
+  }
+
+  @media print {
+    .no-print {
+      display: none;
+    }
+  }
+
+  @media screen {
+    .no-screen {
+      display: none;
+    }
+  }
+
+  @page {
+    size: auto;
+    margin-bottom: 0mm;
+    margin-left: 10mm;
+    margin-right: 10mm;
+    margin-top: 0mm;
   }
 </style>

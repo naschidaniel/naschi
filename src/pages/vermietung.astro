@@ -5,19 +5,24 @@ import ImageGallery from "../components/ImageGallery.vue";
 ---
 
 <Layout title="naschi.at – Vermietung">
-  <h1>Vermietung</h1>
+  <h1>
+    Wohnung mit 45,2 m² am <span style="white-space: nowrap"
+      >Anton-Lippe-Platz 3
+    </span> in Graz zu vermieten
+  </h1>
 
-  <h2>Objektbeschreibung</h2>
+  <h2 class="no-print">Objektbeschreibung</h2>
   <p>
     In zentraler Lage im <strong>Bezirk Liebenau</strong> sucht eine <strong
       >45,2 m² große Wohnung
-    </strong> am <strong>Anton-Lippe-Platz 3</strong> einen neuen Mieter. Durch das
-    nach <strong>Süd-West ausgerichtete Gebäude</strong> wird die Wohnung mit viel
-    Tageslicht durchflutet. Die Wohnung hat eine <strong
-      >10,3 m² großen Balkon
-    </strong>, welcher nach Süden ausgerichtet ist und sich in einem Innenhof
-    befindet. Im großräumigen Wohn- Essbereich (25,8 m²) befindet sich eine
-    neuwertige <strong
+    </strong> am <strong
+      ><span style="white-space: nowrap">Anton-Lippe-Platz 3</span>
+    </strong> einen neuen Mieter. Durch das nach <strong
+      >Süd-West ausgerichtete Gebäude
+    </strong> wird die Wohnung mit viel Tageslicht durchflutet. Die Wohnung hat eine
+    <strong>10,3 m² großen Balkon</strong>, welcher nach Süden ausgerichtet ist
+    und sich in einem Innenhof befindet. Im großräumigen Wohn- Essbereich (25,8
+    m²) befindet sich eine neuwertige <strong
       >Einbauküche mit Einbauherd, Kochfeld, Einbau Kühl-/ Gefrierschrank Kombi
       und vollintegriertem Geschirrspüler
     </strong>. Im Bad befinden sich die Toilette, eine Dusche, ein Waschbecken
@@ -33,7 +38,7 @@ import ImageGallery from "../components/ImageGallery.vue";
     Kellerabteil mit 2,9 m² zugeordnet.
   </p>
 
-  <p>
+  <p class="no-print">
     Einkaufsmöglichkeiten für den täglichen Bedarf, Kinderbetreuung und Schulen
     findet man im nahen Umfeld. Der Campus Inffeldgasse der TU Graz ist mit dem
     Fahrrad in 6 Minuten erreichbar. Der <strong
@@ -42,7 +47,7 @@ import ImageGallery from "../components/ImageGallery.vue";
     und auch die Liebenauer Tangente beginnt in einer Entfernung von nur 400 Meter.
   </p>
 
-  <h3>Kostenaufstellung</h3>
+  <h3 class="no-print">Kostenaufstellung</h3>
   <p>
     Die <strong>Mietzins</strong> für die Wohnung beträgt <strong
       >EUR 535,00 pro Monat
@@ -56,7 +61,7 @@ import ImageGallery from "../components/ImageGallery.vue";
     </strong> Die Kaution für die Wohnung beträgt EUR 2157,00.
   </p>
 
-  <div class="basic-map-gallery-container">
+  <div class="basic-map-gallery-container no-print">
     <div class="basic-map-gallery">
       <h2>Bildergalerie</h2>
       <ImageGallery client:idle />
@@ -67,7 +72,7 @@ import ImageGallery from "../components/ImageGallery.vue";
     </div>
   </div>
 
-  <div class="grid-container">
+  <div class="grid-container no-print">
     <div class="grid-item">
       <h2>Objektinformationen</h2>
       <table>
@@ -184,11 +189,8 @@ import ImageGallery from "../components/ImageGallery.vue";
       </ul>
     </div>
     <div class="grid-item">
-      <h2>Kostenaufstellung und Dokumente</h2>
+      <h2>Dokumente</h2>
       <ul>
-        <li>Mietzins EUR 535,00 pro Monat</li>
-        <li>Betriebskosten Akontozahlung EUR 184,00 pro Monat</li>
-        <li>Kaution EUR 2157,00</li>
         <li>
           <a href="/vermietung/selbstauskunft.pdf" target="_blank"
             >Selbstauskunft
@@ -199,7 +201,49 @@ import ImageGallery from "../components/ImageGallery.vue";
             >DSGVO Erklärung
           </a>
         </li>
+        <li>
+          <a href="/vermietung/expose.pdf" target="_blank">Expose</a>
+        </li>
       </ul>
+    </div>
+    <div class="grid-item">
+      <h2>Kostenaufstellung</h2>
+      <ul>
+        <li>Mietzins EUR 535,00 pro Monat</li>
+        <li>Betriebskosten Akontozahlung EUR 184,00 pro Monat</li>
+        <li>Kaution EUR 2157,00</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="grid-container no-screen">
+    <div class="grid-item">
+      <center
+        ><img src="/media/3_wohn_esszimmer_re_768.jpg" width="92%" />
+      </center>
+    </div>
+    <div class="grid-item">
+      <center><img src="/media/4_kuechenblock_768.jpg" width="92%" /></center>
+    </div>
+    <div class="grid-item">
+      <cetner
+        ><img src="/media/1_grundriss_thumbnail_768.jpg" width="92%" />
+      </cetner>
+    </div>
+    <div class="grid-item">
+      <strong>Anton-Lippe-Platz 3, A-8041 Graz</strong><br />
+      1 Zimmer Wohnung im 2 Stock BJ 2021<br />
+      <strong>Wohnfläche:</strong>45,21 m²<br />
+      <strong>Balkon:</strong>10,30 m²<br />
+      <strong>Fahrstuhl:</strong>Ja<br />
+      <strong>Einbauküche inkl. Geräte:</strong>Ja<br />
+      <br />
+      <br />
+      <strong>Daniel Naschberger</strong><br />
+      <a href="tel:004369910030004">+43 699 10030004</a><br />
+      <a href="mailto:daniel@naschi.at">daniel@naschi.at</a><br />
+      <a href="https://naschi.at/vermietung">https://naschi.at/vermietung</a><br
+      />
     </div>
   </div>
 </Layout>
@@ -234,6 +278,16 @@ import ImageGallery from "../components/ImageGallery.vue";
   @media only screen and (min-width: 750px) {
     .grid-container {
       grid-template-columns: auto auto;
+    }
+  }
+
+  @media only print {
+    .grid-container {
+      grid-template-columns: 350px 350px;
+    }
+    .grid-item {
+      margin: auto;
+      align-self: center;
     }
   }
 
