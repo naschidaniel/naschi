@@ -15,7 +15,9 @@
       />
     </picture>
     <div class="thumbnails-container">
-      <div><button title="Back" @click="navigate(-1)">❰</button></div>
+      <div class="thumbnails">
+        <button class="nav-button" title="Back" @click="navigate(-1)">❰</button>
+      </div>
       <div
         v-for="(item, index) in gallery"
         :key="item.fileNameSrc"
@@ -29,7 +31,7 @@
         </div>
         <div class="sm-d-none">
           <picture
-            style="cursor: pointer; align-self: center"
+            style="cursor: pointer"
             :style="index === count ? 'opacity: 100%;' : 'opacity: 30%;'"
             @click="count = index"
           >
@@ -46,6 +48,7 @@
             />
             <source :srcset="selectedImage.srcset" type="image/jpeg" />
             <img
+              class="image"
               :srcset="
                 getResponsiveSource(
                   '',
@@ -61,7 +64,9 @@
           </picture>
         </div>
       </div>
-      <div><button title="Next" @click="navigate(1)">❱</button></div>
+      <div class="thumbnails">
+        <button class="nav-button" title="Next" @click="navigate(1)">❱</button>
+      </div>
     </div>
     <div class="thumbnails-container">
       <p>
@@ -114,13 +119,8 @@ const selectedImage: ComputedRef<ResponsiveSource> = computed(() => {
   display: flex;
   justify-content: space-between;
 }
-
-.thumbnails-container > div {
-  padding: 2px;
-  align-self: center;
-}
-
 .thumbnails {
+  padding: 2px;
   align-self: center;
 }
 
@@ -129,15 +129,19 @@ const selectedImage: ComputedRef<ResponsiveSource> = computed(() => {
   width: 12px;
   background-color: #bbb;
   border-radius: 50%;
-  display: inline-block;
+  display: block;
 }
 
-button {
-  position: relative;
+.nav-button {
   background-color: #303030;
   border: none;
   color: white;
   padding: 15px;
   font-size: 16px;
+}
+
+.image {
+  display: block;
+  margin: auto;
 }
 </style>
