@@ -1,22 +1,43 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import GithubIcon from "../components/GithubIcon.astro";
-import NaschiLogoIcon from "../components/NaschiLogoIcon.astro";
-import OutlineMailIcon from "../components/OutlineMailIcon.astro";
+import IconGithub from "../components/IconGithub.astro";
+import IconNaschiLogo from "../components/IconNaschiLogo.astro";
+import IconOutlineMail from "../components/IconOutlineMail.astro";
 ---
 
 <Layout title="naschi.at – Daniel Naschberger">
   <div class="main">
     <h1 style="text-align: center">Daniel Naschberger</h1>
-    <NaschiLogoIcon client:load />
+    <IconNaschiLogo client:load />
     <div class="link-box">
-      <GithubIcon client:load />
-      <OutlineMailIcon client:load />
+      <a
+        class="link"
+        href="https://github.com/naschidaniel"
+        target="_blank"
+        rel="noopener"
+        title="Visit my Github Account"
+      >
+        <IconGithub client:load />
+      </a>
+      <a class="link" href="mailto:daniel@naschi.at" title="Write me a message">
+        <IconOutlineMail client:load />
+      </a>
     </div>
   </div>
 </Layout>
 
 <style>
+  .link {
+    align-items: center;
+    display: flex;
+    fill-opacity: 0.8;
+    transition: fill-opacity 0.5s ease-in-out;
+  }
+
+  .link:hover {
+    fill-opacity: 1;
+    transition: fill-opacity 0.5s ease-in-out;
+  }
   .link-box {
     align-items: center;
     display: flex;
