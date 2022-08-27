@@ -15,13 +15,13 @@
       />
     </picture>
     <div class="thumbnails-container">
-      <div class="thumbnails">
+      <div class="thumbnail">
         <button class="nav-button" title="Back" @click="navigate(-1)">❰</button>
       </div>
       <div
         v-for="(item, index) in gallery"
         :key="item.fileNameSrc"
-        class="thumbnails"
+        class="thumbnail"
       >
         <div class="md-d-none">
           <span
@@ -31,7 +31,6 @@
         </div>
         <div class="sm-d-none">
           <picture
-            style="cursor: pointer"
             :style="index === count ? 'opacity: 100%;' : 'opacity: 30%;'"
             @click="count = index"
           >
@@ -64,7 +63,7 @@
           </picture>
         </div>
       </div>
-      <div class="thumbnails">
+      <div class="thumbnail">
         <button class="nav-button" title="Next" @click="navigate(1)">❱</button>
       </div>
     </div>
@@ -119,8 +118,9 @@ const selectedImage: ComputedRef<ResponsiveSource> = computed(() => {
   display: flex;
   justify-content: space-between;
 }
-.thumbnails {
+.thumbnail {
   padding: 2px;
+  cursor: pointer;
   align-self: center;
 }
 
