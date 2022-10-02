@@ -2,6 +2,11 @@
 import Layout from "../layouts/Layout.astro";
 import LeafletMap from "../components/LeafletMap.astro";
 import ImageGallery from "../components/ImageGallery.vue";
+
+const betriebskosten = "140,00";
+const kaution = "2000,00";
+const mietzins = "535,00";
+const ueberweisungsbetrag = "675,00";
 ---
 
 <Layout title="naschi.at – Vermietung">
@@ -50,15 +55,15 @@ import ImageGallery from "../components/ImageGallery.vue";
   <h3 class="no-print">Kostenaufstellung</h3>
   <p>
     Die <strong>Mietzins</strong> für die Wohnung beträgt <strong
-      >EUR 535,00 pro Monat
+      >EUR {mietzins} (inkl. MWST) pro Monat
     </strong>. Die
     <strong>Betriebskosten</strong> sind <strong
-      >rund EUR 184,00 pro Monat
+      >rund EUR {betriebskosten} (inkl. MWST) pro Monat
     </strong> und sind als Akontozahlung zu bezahlen. Die tatsächlichen Betriebskosten
     werden auf Basis der Jahresbrechung berechnet. <strong
-      >Es ergibt sich somit ein Überweisungsbetrag von EUR 719,00 pro Monat.
-    </strong>Die Kaution in der Höhe von drei Monatsmieten für die Wohnung
-    beträgt EUR 2157,00.
+      >Es ergibt sich somit ein Überweisungsbetrag von EUR {ueberweisungsbetrag}
+      (inkl. MWST) pro Monat.
+    </strong>Die Kaution für die Wohnung beträgt EUR {kaution}.
   </p>
 
   <div class="basic-map-gallery-container no-print">
@@ -159,8 +164,12 @@ import ImageGallery from "../components/ImageGallery.vue";
           <td>B</td>
         </tr>
         <tr>
-          <td>Heizung</td>
+          <td>Heizung / Warmwasser</td>
           <td>Zentralheizung</td>
+        </tr>
+        <tr>
+          <td>Brennstoff</td>
+          <td>Fernwärme Graz</td>
         </tr>
       </table>
     </div>
@@ -184,7 +193,7 @@ import ImageGallery from "../components/ImageGallery.vue";
           Einbauküche: Geschirrspüler Herd, Kochfeld, Kühl-/ Gefrierschrank
           Kombi
         </li>
-        <li>Zentralheizung</li>
+        <li>Zentralheizung: Fernwärme Graz</li>
       </ul>
     </div>
     <div class="grid-item">
@@ -208,9 +217,11 @@ import ImageGallery from "../components/ImageGallery.vue";
     <div class="grid-item">
       <h2>Kostenaufstellung</h2>
       <ul>
-        <li>Mietzins EUR 535,00 pro Monat</li>
-        <li>Betriebskosten Akontozahlung EUR 184,00 pro Monat</li>
-        <li>Kaution EUR 2157,00</li>
+        <li>Mietzins EUR {mietzins} (inkl. MWST) pro Monat</li>
+        <li>
+          Betriebskosten Akontozahlung EUR {betriebskosten} (inkl. MWST) pro Monat
+        </li>
+        <li>Kaution EUR {kaution}</li>
       </ul>
     </div>
   </div>
@@ -232,10 +243,13 @@ import ImageGallery from "../components/ImageGallery.vue";
     <div class="grid-item">
       <strong>Anton-Lippe-Platz 3, A-8041 Graz</strong><br />
       1 Zimmer Wohnung im 2 Stock BJ 2021<br />
-      <strong>Wohnfläche:</strong>45,21 m²<br />
-      <strong>Balkon:</strong>10,30 m²<br />
-      <strong>Fahrstuhl:</strong>Ja<br />
-      <strong>Einbauküche inkl. Geräte:</strong>Ja<br />
+      <strong>Wohnfläche:</strong> 45,21 m²<br />
+      <strong>Balkon:</strong> 10,30 m²<br />
+      <strong>Fahrstuhl:</strong> Ja<br />
+      <strong>Einbauküche inkl. Geräte:</strong> Ja<br />
+      <strong>Zentralheizung / Warmwasser:</strong> Fernwärme<br />
+      <strong>Mietzins:</strong> EUR {mietzins} (inkl. MWST)<br />
+      <strong>Betriebskosten:</strong> EUR {betriebskosten} (inkl. MWST)<br />
       <br />
       <br />
       <strong>Daniel Naschberger</strong><br />
