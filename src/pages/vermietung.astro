@@ -2,6 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 import LeafletMap from "../components/LeafletMap.astro";
 import ImageGallery from "../components/ImageGallery.vue";
+import { formatDate } from "../util/formatDate";
+
+const _builTime = new Date(import.meta.env.VITE_APP_BUILDTIME);
+const builTime = formatDate(_builTime);
 
 const betriebskosten = "140,00";
 const kaution = "2000,00";
@@ -259,6 +263,7 @@ const ueberweisungsbetrag = "675,00";
       />
     </div>
   </div>
+  <div class="version no-screen">Version {builTime}</div>
 </Layout>
 
 <style>
@@ -285,7 +290,13 @@ const ueberweisungsbetrag = "675,00";
   }
 
   .grid-item > table > tr > td {
-    width: 50%;
+    width: 60%;
+  }
+
+  .version {
+    text-align: right;
+    color: #d3d3d3;
+    font-size: 50%;
   }
 
   @media only screen and (min-width: 750px) {
