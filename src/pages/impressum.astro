@@ -1,6 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import ProductionDependencies from "../components/ProductionDependencies.vue";
+import { Dependency } from "../model/dependency";
+const dependencies = JSON.parse(
+  import.meta.env.VITE_APP_DEPENDENCIES,
+) as Dependency[];
 ---
 
 <Layout title="naschi.at – Impressum">
@@ -108,5 +111,16 @@ import ProductionDependencies from "../components/ProductionDependencies.vue";
   <div>
     <h2>Verwendete Softwarepaket und Lizenzinformation</h2>
   </div>
-  <ProductionDependencies />
+  <ul>
+    {dependencies.map((dependency) => <li>
+      <span style="font-weight: bold">{dependency.name } </span> – <span style="font-style: italic">{dependency.version }</span> – {dependency.license } License
+    </li>)}
+  </ul>
 </Layout>
+
+<style>
+  ul {
+    list-style-type: square;
+    padding-left: 1em;
+  }
+</style>
