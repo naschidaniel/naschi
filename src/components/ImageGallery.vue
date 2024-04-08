@@ -40,7 +40,7 @@
                   '',
                   true,
                   filteredMedia(item.fileNameSrc),
-                  ''
+                  '',
                 ).srcsetWebp
               "
               type="image/webp"
@@ -53,7 +53,7 @@
                   '',
                   true,
                   filteredMedia(item.fileNameSrc),
-                  ''
+                  '',
                 ).src
               "
               height="100%"
@@ -91,8 +91,8 @@ function navigate(change: number) {
     gallery.length === newValue
       ? (count.value = 0)
       : newValue === -1
-      ? (count.value = gallery.length - 1)
-      : count.value + change;
+        ? (count.value = gallery.length - 1)
+        : count.value + change;
 }
 
 function filteredMedia(fileNameSrc: string) {
@@ -108,7 +108,7 @@ const selectedImage: ComputedRef<ResponsiveSource> = computed(() => {
     alt,
     isThumbnail,
     filteredMedia(gallery[count.value].fileNameSrc),
-    title
+    title,
   );
 });
 </script>

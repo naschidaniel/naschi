@@ -4,7 +4,7 @@ export function getResponsiveSource(
   alt: string,
   isThumbnail: boolean,
   optimizedImages: OptimizedImage[],
-  title: string
+  title: string,
 ): ResponsiveSource {
   const gitsha = import.meta.env.VITE_APP_GITSHA;
   return {
@@ -18,14 +18,14 @@ export function getResponsiveSource(
       .map((i) =>
         isThumbnail
           ? `${i.fileNameThumbnail}?v=${gitsha} ${i.width}w`
-          : `${i.fileName}?v=${gitsha} ${i.width}w`
+          : `${i.fileName}?v=${gitsha} ${i.width}w`,
       )
       .join(", "),
     srcsetWebp: optimizedImages
       .map((i) =>
         isThumbnail
           ? `${i.fileNameThumbnailWebp}?v=${gitsha} ${i.width}w`
-          : `${i.fileNameWebp}?v=${gitsha} ${i.width}w`
+          : `${i.fileNameWebp}?v=${gitsha} ${i.width}w`,
       )
       .join(", "),
     title,

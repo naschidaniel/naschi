@@ -11,7 +11,7 @@
 <script setup lang="ts">
 import { Dependency } from "../model/dependency";
 const dependencies = JSON.parse(
-  import.meta.env.VITE_APP_DEPENDENCIES
+  import.meta.env.VITE_APP_DEPENDENCIES,
 ) as Dependency[];
 </script>
 
