@@ -1,5 +1,5 @@
-import { defineConfig } from 'astro/config';
-import vue from '@astrojs/vue';
+import { defineConfig } from "astro/config";
+import vue from "@astrojs/vue";
 
 import { readFileSync } from "fs";
 import { execSync } from "child_process";
@@ -7,7 +7,7 @@ import { execSync } from "child_process";
 process.env.VITE_APP_BUILDTIME = new Date().toISOString();
 
 const packages = JSON.parse(
-  readFileSync("./package.json", { encoding: "utf8" })
+  readFileSync("./package.json", { encoding: "utf8" }),
 );
 
 const dependencies = Object.keys(packages.dependencies)
@@ -15,8 +15,8 @@ const dependencies = Object.keys(packages.dependencies)
     JSON.parse(
       readFileSync(`node_modules/${dependency}/package.json`, {
         encoding: "utf8",
-      })
-    )
+      }),
+    ),
   )
   .map(({ name, version, license }) => ({
     name,
@@ -32,5 +32,5 @@ process.env.VITE_APP_GITSHA = execSync("git rev-parse --short HEAD", {
 }).trim();
 
 export default defineConfig({
-	integrations: [vue()],
+  integrations: [vue()],
 });

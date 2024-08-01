@@ -5,9 +5,10 @@
   "description": "My personal Website",
   "author": "Daniel Naschberger <daniel@naschi.at>",
   "license": "GPL-3.0",
+  "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "lint": "eslint 'src/**/*.{astro,js,ts,vue}' --fix",
+    "lint": "eslint 'src/**/*.{astro,js,ts,vue}' --fix --ignore-pattern 'src/env.d.ts'",
     "lint-no-fix": "eslint 'src/**/*.{astro,js,ts,vue}'",
     "build": "astro build",
     "preview": "astro preview",
@@ -23,20 +24,21 @@
     "@astrojs/vue": "^4.5.0",
     "@types/leaflet": "^1.9.12",
     "@types/node": "^22.0.2",
-    "@typescript-eslint/eslint-plugin": "^7.14.1",
-    "@typescript-eslint/parser": "^7.14.1",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
     "@vitejs/plugin-vue": "^5.1.2",
     "@vue/cli-plugin-eslint": "^5.0.8",
     "@vue/cli-plugin-typescript": "^5.0.8",
     "@vue/eslint-config-prettier": "^9.0.0",
     "@vue/eslint-config-typescript": "^13.0.0",
-    "eslint": "^8.57.0",
+    "eslint": "^9.8.0",
     "eslint-plugin-astro": "^1.2.3",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-vue": "^9.27.0",
     "prettier": "^3.3.3",
     "prettier-eslint": "^16.3.0",
     "prettier-plugin-astro": "^0.14.1",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.0.0"
   }
 }

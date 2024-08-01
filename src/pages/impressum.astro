@@ -112,9 +112,15 @@ const dependencies = JSON.parse(
     <h2>Verwendete Softwarepaket und Lizenzinformation</h2>
   </div>
   <ul>
-    {dependencies.map((dependency) => <li>
-      <span style="font-weight: bold">{dependency.name } </span> – <span style="font-style: italic">{dependency.version }</span> – {dependency.license } License
-    </li>)}
+    {
+      dependencies.map((dependency) => (
+        <li>
+          <span style="font-weight: bold">{dependency.name} </span> –{" "}
+          <span style="font-style: italic">{dependency.version}</span> –{" "}
+          {dependency.license} License
+        </li>
+      ))
+    }
   </ul>
 </Layout>
 
