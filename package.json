@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "astro dev",
     "lint": "eslint 'src/**/*.{astro,js,ts,vue}' --fix --ignore-pattern 'src/env.d.ts'",
-    "lint-no-fix": "eslint 'src/**/*.{astro,js,ts,vue}'",
+    "lint-no-fix": "eslint 'src/**/*.{astro,js,ts,vue}' --ignore-pattern 'src/env.d.ts'",
     "build": "astro build",
     "preview": "astro preview",
     "optimize-images": "rm -rf public/media/* && ./image-optimizer --source ./media/ --destination public/media --prefix /media --widths 384 512 640 768 1280 1536 --qualities 99 99 99 99 99 99 --jsonfile media.json && cp public/media/media.json src/media/media.json"
