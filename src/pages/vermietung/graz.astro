@@ -1,0 +1,271 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import LeafletMapInnsbruck from "../../components/LeafletMapInnsbruck.astro";
+import ImageGallery from "../../components/ImageGallery.vue";
+import { formatDate } from "../../util/formatDate";
+import gallery from "../../media/graz.json";
+
+const _builTime = new Date(import.meta.env.VITE_APP_BUILDTIME);
+const builTime = formatDate(_builTime);
+
+const betriebskosten = "140,00";
+const kaution = "2000,00";
+const mietzins = "535,00";
+const ueberweisungsbetrag = "675,00";
+---
+
+<Layout title="naschi.at – Vermietung Graz">
+  <h1>
+    Wohnung mit 45,2 m² am <span style="white-space: nowrap"
+      >Anton-Lippe-Platz 3
+    </span> in Graz zu vermieten
+  </h1>
+
+  <h2 class="no-print">Objektbeschreibung</h2>
+  <p>
+    In zentraler Lage im <strong>Bezirk Liebenau</strong> sucht eine <strong
+      >45,2 m² große Wohnung
+    </strong> am <strong
+      ><span style="white-space: nowrap">Anton-Lippe-Platz 3</span>
+    </strong> einen neuen Mieter. Durch das nach <strong
+      >Süd-West ausgerichtete Gebäude
+    </strong> wird die Wohnung mit viel Tageslicht durchflutet. Die Wohnung hat eine
+    <strong>10,3 m² großen Balkon</strong>, welcher nach Süden ausgerichtet ist
+    und sich in einem Innenhof befindet. Im großräumigen Wohn- Essbereich (25,8
+    m²) befindet sich eine neuwertige <strong
+      >Einbauküche mit Einbauherd, Kochfeld, Einbau Kühl-/ Gefrierschrank Kombi
+      und vollintegriertem Geschirrspüler.
+    </strong> Im Bad befinden sich die Toilette, eine Dusche, ein Waschbecken mit
+    Spiegel, ein Fenster zum lüften und ein Waschmaschinenanschluss. Das Schlafzimmer
+    ist nach Nord-Ost ausgerichtet und zeichnet sich durch seine Ruhe in der Nacht
+    aus.
+  </p>
+
+  <p>
+    Die Wohnanlage mit 13 Wohneinheiten wurde im <strong
+      >September 2021 fertiggestellt
+    </strong>. In der Wohnanlage gibt es einen Aufzug und zur Wohnung ist ein
+    Kellerabteil mit 2,9 m² zugeordnet.
+  </p>
+
+  <p class="no-print">
+    Einkaufsmöglichkeiten für den täglichen Bedarf, Kinderbetreuung und Schulen
+    findet man im nahen Umfeld. Der Campus Inffeldgasse der TU Graz ist mit dem
+    Fahrrad in 6 Minuten erreichbar. Der <strong
+      >Anschluss an den öffentlichen Verkehr
+    </strong> (Straßenbahnlinie 4, 10 Minuten zum Grazer Hauptbahnhof) ist perfekt
+    und auch die Liebenauer Tangente beginnt in einer Entfernung von nur 400 Meter.
+  </p>
+
+  <h3 class="no-print">Kostenaufstellung</h3>
+  <p>
+    Die <strong>Mietzins</strong> für die Wohnung beträgt <strong
+      >EUR {mietzins} (inkl. MWST) pro Monat
+    </strong>. Die
+    <strong>Betriebskosten</strong> sind <strong
+      >rund EUR {betriebskosten} (inkl. MWST) pro Monat
+    </strong> und sind als Akontozahlung zu bezahlen. Die tatsächlichen Betriebskosten
+    werden auf Basis der Jahresbrechung berechnet. <strong
+      >Es ergibt sich somit ein Überweisungsbetrag von EUR {ueberweisungsbetrag}
+      (inkl. MWST) pro Monat.
+    </strong>Die Kaution für die Wohnung beträgt EUR {kaution}.
+  </p>
+
+  <div class="basic-map-gallery-container no-print">
+    <div class="basic-map-gallery">
+      <h2>Bildergalerie</h2>
+      <ImageGallery client:idle gallery={gallery} />
+    </div>
+    <div class="basic-map-gallery">
+      <h2>Objektstandort</h2>
+      <LeafletMapInnsbruck />
+    </div>
+  </div>
+
+  <div class="grid-container no-print">
+    <div class="grid-item">
+      <h2>Objektinformationen</h2>
+      <table>
+        <tr>
+          <td>Straße</td>
+          <td>Anton-Lippe-Platz 3</td>
+        </tr>
+        <tr>
+          <td>PLZ</td>
+          <td>A-8041 Graz</td>
+        </tr>
+        <tr>
+          <td>Bautyp</td>
+          <td>Neubau 2021</td>
+        </tr>
+        <tr>
+          <td>Zustand</td>
+          <td>Neuwertig</td>
+        </tr>
+        <tr>
+          <td>Wohnfläche</td>
+          <td>45,21 m²</td>
+        </tr>
+        <tr>
+          <td>Balkon</td>
+          <td>10,30 m²</td>
+        </tr>
+        <tr>
+          <td>Zimmer</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Stockwerk</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>Fahrstuhl</td>
+          <td>✔️</td>
+        </tr>
+        <tr>
+          <td>Einbauküche</td>
+          <td>✔️</td>
+        </tr>
+      </table>
+    </div>
+    <div class="grid-item">
+      <h2>Raumaufteilung</h2>
+      <table>
+        <tr>
+          <td>Wohn-Essberich</td>
+          <td>25,80 m²</td>
+        </tr>
+        <tr>
+          <td>Vorraum</td>
+          <td>2,59m²</td>
+        </tr>
+        <tr>
+          <td>Bad/WC</td>
+          <td>4,26m²</td>
+        </tr>
+        <tr>
+          <td>Zimmer</td>
+          <td>11,10 m²</td>
+        </tr>
+        <tr>
+          <td>Balkon/Terasse</td>
+          <td>10,30 m²</td>
+        </tr>
+        <tr>
+          <td>Kellerabteil</td>
+          <td>2,98 m²</td>
+        </tr>
+      </table>
+    </div>
+    <div class="grid-item">
+      <h2>Energieausweis/Heizung</h2>
+      <table>
+        <tr>
+          <td>HWB (kWh/m²/Jahr)</td>
+          <td>42,6</td>
+        </tr>
+        <tr>
+          <td>HWB Energieklasse</td>
+          <td>B</td>
+        </tr>
+        <tr>
+          <td>Heizung / Warmwasser</td>
+          <td>Zentralheizung</td>
+        </tr>
+        <tr>
+          <td>Brennstoff</td>
+          <td>Fernwärme Graz</td>
+        </tr>
+      </table>
+    </div>
+    <div class="grid-item">
+      <h2>Lage</h2>
+      <ul>
+        <li>Region: Bezirk Liebenau</li>
+        <li>
+          Perfekter Anschluss an den öffentlichen Verkehr und an den Radweg.
+          Geschäfte des täglichen Bedarfs befinden sich in unmittelbarer Nähe.
+        </li>
+      </ul>
+    </div>
+    <div class="grid-item">
+      <h2>Ausstattung</h2>
+      <ul>
+        <li>Eichen Parkett im Wohn-Essberich und Schlafzimmer</li>
+        <li>Fließenboden im Bad und Vorraum</li>
+        <li>Anschlus für Internet und Kabel TV</li>
+        <li>
+          Einbauküche: Geschirrspüler Herd, Kochfeld, Kühl-/ Gefrierschrank
+          Kombi
+        </li>
+        <li>Zentralheizung: Fernwärme Graz</li>
+      </ul>
+    </div>
+    <div class="grid-item">
+      <h2>Dokumente</h2>
+      <ul>
+        <li>
+          <a href="/vermietung/selbstauskunft.pdf" target="_blank"
+            >Selbstauskunft
+          </a>
+        </li>
+        <li>
+          <a href="/vermietung/dsgvo-datenverarbeitung.pdf" target="_blank"
+            >DSGVO Erklärung
+          </a>
+        </li>
+        <li>
+          <a href="/vermietung/expose-graz.pdf" target="_blank">Expose Graz</a>
+        </li>
+      </ul>
+    </div>
+    <div class="grid-item">
+      <h2>Kostenaufstellung</h2>
+      <ul>
+        <li>Mietzins EUR {mietzins} (inkl. MWST) pro Monat</li>
+        <li>
+          Betriebskosten Akontozahlung EUR {betriebskosten} (inkl. MWST) pro Monat
+        </li>
+        <li>Kaution EUR {kaution}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="grid-container no-screen">
+    <div class="grid-item">
+      <center
+        ><img src="/media/graz/2_wohn_esszimmer_re_768.jpg" width="92%" />
+      </center>
+    </div>
+    <div class="grid-item">
+      <center
+        ><img src="/media/graz/4_kuechenblock_768.jpg" width="92%" /></center
+      >
+    </div>
+    <div class="grid-item">
+      <cetner
+        ><img src="/media/graz/1_grundriss_thumbnail_768.jpg" width="92%" />
+      </cetner>
+    </div>
+    <div class="grid-item">
+      <strong>Anton-Lippe-Platz 3, A-8041 Graz</strong><br />
+      1 Zimmer Wohnung im 2 Stock BJ 2021<br />
+      <strong>Wohnfläche:</strong> 45,21 m²<br />
+      <strong>Balkon:</strong> 10,30 m²<br />
+      <strong>Fahrstuhl:</strong> Ja<br />
+      <strong>Einbauküche inkl. Geräte:</strong> Ja<br />
+      <strong>Zentralheizung / Warmwasser:</strong> Fernwärme<br />
+      <strong>Mietzins:</strong> EUR {mietzins} (inkl. MWST)<br />
+      <strong>Betriebskosten:</strong> EUR {betriebskosten} (inkl. MWST)<br />
+      <br />
+      <br />
+      <strong>Daniel Naschberger</strong><br />
+      <a href="tel:004369910030004">+43 699 10030004</a><br />
+      <a href="mailto:daniel@naschi.at">daniel@naschi.at</a><br />
+      <a href="https://naschi.at/vermietung/graz"
+        >https://naschi.at/vermietung/graz</a
+      ><br />
+    </div>
+  </div>
+  <div class="version no-screen">Version {builTime}</div>
+</Layout>

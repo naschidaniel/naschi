@@ -1,8 +1,9 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import LeafletMap from "../components/LeafletMap.astro";
-import ImageGallery from "../components/ImageGallery.vue";
-import { formatDate } from "../util/formatDate";
+import Layout from "../../layouts/Layout.astro";
+import LeafletMapInnsbruck from "../../components/LeafletMapInnsbruck.astro";
+import ImageGallery from "../../components/ImageGallery.vue";
+import { formatDate } from "../../util/formatDate";
+import gallery from "../../media/graz.json";
 
 const _builTime = new Date(import.meta.env.VITE_APP_BUILDTIME);
 const builTime = formatDate(_builTime);
@@ -13,11 +14,11 @@ const mietzins = "535,00";
 const ueberweisungsbetrag = "675,00";
 ---
 
-<Layout title="naschi.at – Vermietung">
+<Layout title="naschi.at – Vermietung Innsbruck">
   <h1>
-    Wohnung mit 45,2 m² am <span style="white-space: nowrap"
-      >Anton-Lippe-Platz 3
-    </span> in Graz zu vermieten
+    Wohnung mit 88 m² in <span style="white-space: nowrap"
+      >der Peter-Mayr-Straße 29
+    </span> in Innsbruck zu vermieten
   </h1>
 
   <h2 class="no-print">Objektbeschreibung</h2>
@@ -73,11 +74,11 @@ const ueberweisungsbetrag = "675,00";
   <div class="basic-map-gallery-container no-print">
     <div class="basic-map-gallery">
       <h2>Bildergalerie</h2>
-      <ImageGallery client:idle />
+      <ImageGallery client:idle gallery={gallery} />
     </div>
     <div class="basic-map-gallery">
       <h2>Objektstandort</h2>
-      <LeafletMap />
+      <LeafletMapInnsbruck />
     </div>
   </div>
 
@@ -214,7 +215,7 @@ const ueberweisungsbetrag = "675,00";
           </a>
         </li>
         <li>
-          <a href="/vermietung/expose.pdf" target="_blank">Expose</a>
+          <a href="/vermietung/expose-graz.pdf" target="_blank">Expose Graz</a>
         </li>
       </ul>
     </div>
@@ -233,15 +234,17 @@ const ueberweisungsbetrag = "675,00";
   <div class="grid-container no-screen">
     <div class="grid-item">
       <center
-        ><img src="/media/2_wohn_esszimmer_re_768.jpg" width="92%" />
+        ><img src="/media/graz/2_wohn_esszimmer_re_768.jpg" width="92%" />
       </center>
     </div>
     <div class="grid-item">
-      <center><img src="/media/4_kuechenblock_768.jpg" width="92%" /></center>
+      <center
+        ><img src="/media/graz/4_kuechenblock_768.jpg" width="92%" /></center
+      >
     </div>
     <div class="grid-item">
       <cetner
-        ><img src="/media/1_grundriss_thumbnail_768.jpg" width="92%" />
+        ><img src="/media/graz/1_grundriss_thumbnail_768.jpg" width="92%" />
       </cetner>
     </div>
     <div class="grid-item">
@@ -259,82 +262,10 @@ const ueberweisungsbetrag = "675,00";
       <strong>Daniel Naschberger</strong><br />
       <a href="tel:004369910030004">+43 699 10030004</a><br />
       <a href="mailto:daniel@naschi.at">daniel@naschi.at</a><br />
-      <a href="https://naschi.at/vermietung">https://naschi.at/vermietung</a><br
-      />
+      <a href="https://naschi.at/vermietung/graz"
+        >https://naschi.at/vermietung/graz</a
+      ><br />
     </div>
   </div>
   <div class="version no-screen">Version {builTime}</div>
 </Layout>
-
-<style>
-  .basic-map-gallery-container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .basic-map-gallery {
-    width: 100%;
-    padding: 0px;
-  }
-
-  .grid-container {
-    display: grid;
-    grid-template-columns: auto;
-  }
-  .grid-item {
-    padding: 10px;
-    text-align: left;
-  }
-
-  .grid-item > table {
-    width: 100%;
-  }
-
-  .grid-item > table > tr > td {
-    width: 60%;
-  }
-
-  .version {
-    text-align: right;
-    color: #d3d3d3;
-    font-size: 50%;
-  }
-
-  @media only screen and (min-width: 750px) {
-    .grid-container {
-      grid-template-columns: auto auto;
-    }
-  }
-
-  @media only print {
-    .grid-container {
-      grid-template-columns: 350px 350px;
-    }
-    .grid-item {
-      margin: auto;
-      align-self: center;
-    }
-  }
-
-  @media only screen and (min-width: 1000px) {
-    .basic-map-gallery {
-      width: 48%;
-      padding: 9px;
-    }
-
-    .grid-container {
-      grid-template-columns: auto auto auto;
-    }
-  }
-
-  @media screen {
-    .no-screen {
-      display: none;
-    }
-  }
-
-  @media print {
-    .no-print {
-      display: none;
-    }
-  }
-</style>

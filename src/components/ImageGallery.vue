@@ -75,39 +75,40 @@
   </div>
 </template>
 <script setup lang="ts">
-import { ref, computed, ComputedRef } from "vue";
-import { ResponsiveSource, OptimizedImage, Gallery } from "../model/image";
+import { ref, computed, ComputedRef, defineProps, PropType } from "vue";
+import { ResponsiveSource, Gallery } from "../model/image";
 import { getResponsiveSource } from "../util/getResponsiveSource";
-import _gallery from "../media/gallery.json";
-import _optimizedImages from "../media/media.json";
+import { filteredMedia } from "../util/filteredMedia";
 
-const gallery = _gallery as Gallery[];
-const optimizedImages = _optimizedImages as OptimizedImage[];
+const props = defineProps({
+  gallery: {
+    type: Object as PropType<Gallery[]>,
+    required: true,
+  },
+});
+
+console.log(props.gallery)
 
 const count = ref(0);
 function navigate(change: number) {
   const newValue = count.value + change;
   count.value =
-    gallery.length === newValue
+    props.gallery.length === newValue
       ? (count.value = 0)
       : newValue === -1
-        ? (count.value = gallery.length - 1)
+        ? (count.value = props.gallery.length - 1)
         : count.value + change;
 }
 
-function filteredMedia(fileNameSrc: string) {
-  return optimizedImages.filter((o) => fileNameSrc === o.fileNameSrc);
-}
-
 const selectedImage: ComputedRef<ResponsiveSource> = computed(() => {
-  const alt = gallery[count.value].alt;
+  const alt = props.gallery[count.value].alt;
 
-  const title = gallery[count.value].title;
-  const isThumbnail = gallery[count.value].isThumbnail;
+  const title = props.gallery[count.value].title;
+  const isThumbnail = props.gallery[count.value].isThumbnail;
   return getResponsiveSource(
     alt,
     isThumbnail,
-    filteredMedia(gallery[count.value].fileNameSrc),
+    filteredMedia(props.gallery[count.value].fileNameSrc),
     title,
   );
 });

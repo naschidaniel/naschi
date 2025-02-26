@@ -1,0 +1,83 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { filteredMedia } from "../../util/filteredMedia";
+import { getResponsiveSource } from "../../util/getResponsiveSource";
+
+const alt = "Graz";
+const title = "Graz ";
+const isThumbnail = false;
+const graz = getResponsiveSource(
+  alt,
+  isThumbnail,
+  filteredMedia("/media/graz.jpg"),
+  title,
+);
+const innsbruck = getResponsiveSource(
+  alt,
+  isThumbnail,
+  filteredMedia("/media/graz.jpg"),
+  title,
+);
+---
+
+<Layout title="naschi.at – Vermietung">
+  <div class="main">
+    <h1 style="text-align: center">Vermietung</h1>
+    <div id="wrapper">
+      <div id="first">
+        <a href="/vermietung/graz">
+          <picture>
+            <source
+              sizes={graz.sizes}
+              srcset={graz.srcsetWebp}
+              type="image/webp"
+            />
+            <source srcset={graz.srcset} type="image/jpeg" />
+            <img src={graz.src} height="100%" width="100%" title={graz.title} />
+          </picture>
+        </a>
+        <a href="/vermietung/graz">Graz – am Anton-Lippe-Platz 3</a>
+      </div>
+      <div id="second">
+        <a href="/vermietung/innsbruck">
+          <picture>
+            <source
+              sizes={innsbruck.sizes}
+              srcset={innsbruck.srcsetWebp}
+              type="image/webp"
+            />
+            <source srcset={innsbruck.srcset} type="image/jpeg" />
+            <img
+              src={innsbruck.src}
+              height="100%"
+              width="100%"
+              title={innsbruck.title}
+            />
+          </picture>
+        </a>
+        <a href="/vermietung/innsbruck">Innsbruck – Peter-Mayr-Straße 29</a>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  #wrapper {
+    padding-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    text-align: center;
+  }
+  #first {
+    padding: 10px;
+    max-width: 40%;
+    float: left;
+    margin: auto;
+  }
+  #second {
+    padding: 10px;
+    max-width: 40%;
+    margin: auto;
+  }
+</style>
