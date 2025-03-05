@@ -3,72 +3,104 @@ import Layout from "../../layouts/Layout.astro";
 import LeafletMapInnsbruck from "../../components/LeafletMapInnsbruck.astro";
 import ImageGallery from "../../components/ImageGallery.vue";
 import { formatDate } from "../../util/formatDate";
-import gallery from "../../media/graz.json";
 
+const gallery = [
+  {
+    fileNameSrc: "/media/innsbruck/1_grundriss.jpg",
+    alt: "Grundrissplan von der Wohnung",
+    title: "Grundrissplan von der Wohnung",
+  },
+  {
+    fileNameSrc: "/media/innsbruck/2_wohnen.jpg",
+    alt: "Wohnzimmer von Eingangsbereich fotografiert",
+    title: "Wohnzimmer",
+  },
+  {
+    fileNameSrc: "/media/innsbruck/3_kueche.jpg",
+    alt: "Einbauküche von rechts fotografiert",
+    title: "Einbauküche",
+  },
+  {
+    fileNameSrc: "/media/innsbruck/3_kueche_2.jpg",
+    alt: "Einbauküche von links fotografiert",
+    title: "Einbauküche",
+  },
+  {
+    fileNameSrc: "/media/innsbruck/4_abstellraum.jpg",
+    alt: "Abstellraum von Eingansbereich fotografiert",
+    title: "Abstellraum",
+  },
+  {
+    fileNameSrc: "/media/innsbruck/5_balkon.jpg",
+    alt: "Balkon Blickrichung Norden",
+    title: "Balkon",
+  },
+];
 const _builTime = new Date(import.meta.env.VITE_APP_BUILDTIME);
 const builTime = formatDate(_builTime);
 
-const betriebskosten = "140,00";
-const kaution = "2000,00";
-const mietzins = "535,00";
-const ueberweisungsbetrag = "675,00";
+const betriebskosten = "350,00";
+const mietzins = "1200,00";
+const ueberweisungsbetrag = "1550,00";
+const kaution = "4650,00";
+const verfuegbar = "2025-XX-XX";
 ---
 
 <Layout title="naschi.at – Vermietung Innsbruck">
   <h1>
-    Wohnung mit 88 m² in <span style="white-space: nowrap"
-      >der Peter-Mayr-Straße 29
-    </span> in Innsbruck zu vermieten
+    2,5 Zimmer Wohnung mit 88 m² in der Peter-Mayr-Straße 29 in Innsbruck zu
+    vermieten
   </h1>
 
   <h2 class="no-print">Objektbeschreibung</h2>
   <p>
-    In zentraler Lage im <strong>Bezirk Liebenau</strong> sucht eine <strong
-      >45,2 m² große Wohnung
-    </strong> am <strong
-      ><span style="white-space: nowrap">Anton-Lippe-Platz 3</span>
-    </strong> einen neuen Mieter. Durch das nach <strong
-      >Süd-West ausgerichtete Gebäude
-    </strong> wird die Wohnung mit viel Tageslicht durchflutet. Die Wohnung hat eine
-    <strong>10,3 m² großen Balkon</strong>, welcher nach Süden ausgerichtet ist
-    und sich in einem Innenhof befindet. Im großräumigen Wohn- Essbereich (25,8
-    m²) befindet sich eine neuwertige <strong
-      >Einbauküche mit Einbauherd, Kochfeld, Einbau Kühl-/ Gefrierschrank Kombi
-      und vollintegriertem Geschirrspüler.
-    </strong> Im Bad befinden sich die Toilette, eine Dusche, ein Waschbecken mit
-    Spiegel, ein Fenster zum lüften und ein Waschmaschinenanschluss. Das Schlafzimmer
-    ist nach Nord-Ost ausgerichtet und zeichnet sich durch seine Ruhe in der Nacht
-    aus.
+    Im Herzen von Wilten, in der Peter-Mayr-Straße 29, befindet sich diese <strong
+      >87,65 m² große Wohnung</strong
+    >, die durch ihre ruhige, aber zentrale Lage und hochwertige Ausstattung
+    besticht. Die Generalsanierung und <strong
+      >fortlaufende Modernisierungen sorgen für zeitgemäßen Wohnkomfort</strong
+    >. Die <strong>neuwertige Einbauküche</strong> mit modernen Geräten lädt zum
+    Kochen ein, während das Badezimmer mit Dusche und Fenster überzeugt. Das zum
+    Innenhof ausgerichtete Schlafzimmer garantiert ruhige Nächte. Ein Abstellraum
+    mit Waschmaschinenanschluss und Gasetagenheizung bietet zusätzlichen Stauraum.
   </p>
 
   <p>
-    Die Wohnanlage mit 13 Wohneinheiten wurde im <strong
-      >September 2021 fertiggestellt
-    </strong>. In der Wohnanlage gibt es einen Aufzug und zur Wohnung ist ein
-    Kellerabteil mit 2,9 m² zugeordnet.
+    Die Gebäude mit 6 Wohneinheiten wurde im 1947 wiederaufgebau und <strong
+      >2008 wurde die Wohnung generalsaniert</strong
+    >. Im Gebäude gibt es einen Aufzug und zur Wohnung ist ein Kellerabteil mit
+    2,21 m² zugeordnet.
   </p>
 
   <p class="no-print">
-    Einkaufsmöglichkeiten für den täglichen Bedarf, Kinderbetreuung und Schulen
-    findet man im nahen Umfeld. Der Campus Inffeldgasse der TU Graz ist mit dem
-    Fahrrad in 6 Minuten erreichbar. Der <strong
-      >Anschluss an den öffentlichen Verkehr
-    </strong> (Straßenbahnlinie 4, 10 Minuten zum Grazer Hauptbahnhof) ist perfekt
-    und auch die Liebenauer Tangente beginnt in einer Entfernung von nur 400 Meter.
+    Die Peter-Mayr-Straße ist eine begehrte Wohnlage in Innsbruck. Die Wohnung
+    befindet sich in unmittelbarer Nähe zur Landesklinik Tirol, der UNI
+    Innsbruck und der Innenstadt und bietet eine hervorragende Infrastruktur.
+    Einkaufsmöglichkeiten, Restaurants, Cafés, kulturelle Einrichtungen und
+    öffentliche Verkehrsmittel sind bequem zu Fuß erreichbar. Die Nähe zum Inn
+    und zu den umliegenden Parks bietet zahlreiche Möglichkeiten zur
+    Freizeitgestaltung.
   </p>
 
   <h3 class="no-print">Kostenaufstellung</h3>
   <p>
     Die <strong>Mietzins</strong> für die Wohnung beträgt <strong
-      >EUR {mietzins} (inkl. MWST) pro Monat
+      >EUR {mietzins} pro Monat
     </strong>. Die
-    <strong>Betriebskosten</strong> sind <strong
+    <strong>Betriebskosten</strong> belaufen sich bei <strong
       >rund EUR {betriebskosten} (inkl. MWST) pro Monat
     </strong> und sind als Akontozahlung zu bezahlen. Die tatsächlichen Betriebskosten
-    werden auf Basis der Jahresbrechung berechnet. <strong
+    werden auf Basis der Jahresbrechung berechnet. Die Betriebskosten sind exklusive
+    Strom, Warmwasser und Heizkosten. <strong
       >Es ergibt sich somit ein Überweisungsbetrag von EUR {ueberweisungsbetrag}
       (inkl. MWST) pro Monat.
     </strong>Die Kaution für die Wohnung beträgt EUR {kaution}.
+  </p>
+
+  <p>
+    <srong
+      >Die Wohnung ist ab {verfuegbar} bezugsfertig und freut sich auf neue Mieter.</srong
+    >
   </p>
 
   <div class="basic-map-gallery-container no-print">
@@ -88,31 +120,43 @@ const ueberweisungsbetrag = "675,00";
       <table>
         <tr>
           <td>Straße</td>
-          <td>Anton-Lippe-Platz 3</td>
+          <td>Peter-Mayr-Straße 29</td>
         </tr>
         <tr>
           <td>PLZ</td>
-          <td>A-8041 Graz</td>
-        </tr>
-        <tr>
-          <td>Bautyp</td>
-          <td>Neubau 2021</td>
-        </tr>
-        <tr>
-          <td>Zustand</td>
-          <td>Neuwertig</td>
+          <td>A-6020 Innsbruck</td>
         </tr>
         <tr>
           <td>Wohnfläche</td>
-          <td>45,21 m²</td>
+          <td>87,65 m²</td>
         </tr>
         <tr>
           <td>Balkon</td>
-          <td>10,30 m²</td>
+          <td>4,20 m²</td>
         </tr>
         <tr>
-          <td>Zimmer</td>
-          <td>1</td>
+          <td>Bautyp</td>
+          <td>1947 Wiederaufbau</td>
+        </tr>
+        <tr>
+          <td>Zustand</td>
+          <td>2008 Generalsaniert</td>
+        </tr>
+        <tr>
+          <td>Bad</td>
+          <td>2019 renoviert</td>
+        </tr>
+        <tr>
+          <td>Einbauküche</td>
+          <td>2023 Küche und Geräte neu eingebaut</td>
+        </tr>
+        <tr>
+          <td>Raumhöhe</td>
+          <td>2,85 m</td>
+        </tr>
+        <tr>
+          <td>Schlafzimmer</td>
+          <td>2</td>
         </tr>
         <tr>
           <td>Stockwerk</td>
@@ -126,34 +170,46 @@ const ueberweisungsbetrag = "675,00";
           <td>Einbauküche</td>
           <td>✔️</td>
         </tr>
+        <tr>
+          <td>verfügbar ab</td>
+          <td>{verfuegbar}</td>
+        </tr>
       </table>
     </div>
     <div class="grid-item">
       <h2>Raumaufteilung</h2>
       <table>
         <tr>
-          <td>Wohn-Essberich</td>
-          <td>25,80 m²</td>
+          <td>Wohnen</td>
+          <td>24,71 m²</td>
         </tr>
         <tr>
-          <td>Vorraum</td>
-          <td>2,59m²</td>
+          <td>Küche</td>
+          <td>10,10 m²</td>
         </tr>
         <tr>
           <td>Bad/WC</td>
-          <td>4,26m²</td>
+          <td>5,53 m²</td>
         </tr>
         <tr>
           <td>Zimmer</td>
-          <td>11,10 m²</td>
+          <td>18,15 m²</td>
         </tr>
         <tr>
-          <td>Balkon/Terasse</td>
-          <td>10,30 m²</td>
+          <td>Schlafen</td>
+          <td>15,40 m²</td>
+        </tr>
+        <tr>
+          <td>Abstellraum</td>
+          <td>4,23 m²</td>
+        </tr>
+        <tr>
+          <td>Balkon</td>
+          <td>4,20 m²</td>
         </tr>
         <tr>
           <td>Kellerabteil</td>
-          <td>2,98 m²</td>
+          <td>2,21 m²</td>
         </tr>
       </table>
     </div>
@@ -162,26 +218,34 @@ const ueberweisungsbetrag = "675,00";
       <table>
         <tr>
           <td>HWB (kWh/m²/Jahr)</td>
-          <td>42,6</td>
+          <td>103,59</td>
         </tr>
         <tr>
           <td>HWB Energieklasse</td>
-          <td>B</td>
+          <td>D</td>
         </tr>
         <tr>
           <td>Heizung / Warmwasser</td>
-          <td>Zentralheizung</td>
+          <td>Etagenheizung</td>
         </tr>
         <tr>
           <td>Brennstoff</td>
-          <td>Fernwärme Graz</td>
+          <td>Gas</td>
         </tr>
       </table>
     </div>
     <div class="grid-item">
       <h2>Lage</h2>
       <ul>
-        <li>Region: Bezirk Liebenau</li>
+        <li>
+          Trotz der zentralen Lage in Innsbruck ist die Wohnung bemerkenswert
+          ruhig.
+        </li>
+        <li>
+          Die Wohnung punktet mit ihrer optimalen Lage in unmittelbarer Nähe zur
+          Landesklinik Tirol, der Universität Innsbruck und der belebten
+          Innenstadt.
+        </li>
         <li>
           Perfekter Anschluss an den öffentlichen Verkehr und an den Radweg.
           Geschäfte des täglichen Bedarfs befinden sich in unmittelbarer Nähe.
@@ -191,14 +255,14 @@ const ueberweisungsbetrag = "675,00";
     <div class="grid-item">
       <h2>Ausstattung</h2>
       <ul>
-        <li>Eichen Parkett im Wohn-Essberich und Schlafzimmer</li>
-        <li>Fließenboden im Bad und Vorraum</li>
+        <li>Birken Parkett im Wohnzimmer und in den beiden Schlafzimmer</li>
+        <li>Fließenboden im Bad, Vorraum und der Küche</li>
         <li>Anschlus für Internet und Kabel TV</li>
         <li>
-          Einbauküche: Geschirrspüler Herd, Kochfeld, Kühl-/ Gefrierschrank
-          Kombi
+          Einbauküche (Einbaudatum 2023) Geschirrspüler Herd, Kochfeld,
+          Kühlschrank
         </li>
-        <li>Zentralheizung: Fernwärme Graz</li>
+        <li>Großer Paxschrank im Schlafzimmer und im Zimmer</li>
       </ul>
     </div>
     <div class="grid-item">
@@ -215,7 +279,7 @@ const ueberweisungsbetrag = "675,00";
           </a>
         </li>
         <li>
-          <a href="/vermietung/expose-graz.pdf" target="_blank">Expose Graz</a>
+          <a href="/vermietung/expose-innsbruck.pdf" target="_blank">Expose</a>
         </li>
       </ul>
     </div>
@@ -234,36 +298,42 @@ const ueberweisungsbetrag = "675,00";
   <div class="grid-container no-screen">
     <div class="grid-item">
       <center
-        ><img src="/media/graz/2_wohn_esszimmer_re_768.jpg" width="92%" />
+        ><img src="/media/innsbruck/2_wohnen_768.jpg" width="92%" />
       </center>
     </div>
     <div class="grid-item">
       <center
-        ><img src="/media/graz/4_kuechenblock_768.jpg" width="92%" /></center
+        ><img src="/media/innsbruck/3_kueche_768.jpg" width="92%" /></center
       >
     </div>
     <div class="grid-item">
       <cetner
-        ><img src="/media/graz/1_grundriss_thumbnail_768.jpg" width="92%" />
+        ><img
+          src="/media/innsbruck/1_grundriss_thumbnail_768.jpg"
+          width="92%"
+        />
       </cetner>
     </div>
     <div class="grid-item">
-      <strong>Anton-Lippe-Platz 3, A-8041 Graz</strong><br />
-      1 Zimmer Wohnung im 2 Stock BJ 2021<br />
-      <strong>Wohnfläche:</strong> 45,21 m²<br />
-      <strong>Balkon:</strong> 10,30 m²<br />
+      <strong>Peter-Mayr-Straße 29, A-6020 Innsbruck</strong><br />
+      2,5 Zimmer Wohnung im 2 Stock<br />
+      <strong>Wohnfläche:</strong> 87,65 m²<br />
+      <strong>Balkon:</strong> 4,20 m²<br />
+      <strong>Raumhöhe:</strong> 2,85 m<br />
       <strong>Fahrstuhl:</strong> Ja<br />
       <strong>Einbauküche inkl. Geräte:</strong> Ja<br />
       <strong>Zentralheizung / Warmwasser:</strong> Fernwärme<br />
-      <strong>Mietzins:</strong> EUR {mietzins} (inkl. MWST)<br />
-      <strong>Betriebskosten:</strong> EUR {betriebskosten} (inkl. MWST)<br />
+      <strong>Mietzins:</strong> EUR {mietzins}<br />
+      <strong>Betriebskosten:</strong> EUR {betriebskosten} (exklusive Warmwasser
+      und Heizkosten)<br />
       <br />
       <br />
+      <strong>Die Wohnung ist ab {verfuegbar} verfügbar.</strong><br />
       <strong>Daniel Naschberger</strong><br />
       <a href="tel:004369910030004">+43 699 10030004</a><br />
       <a href="mailto:daniel@naschi.at">daniel@naschi.at</a><br />
-      <a href="https://naschi.at/vermietung/graz"
-        >https://naschi.at/vermietung/graz</a
+      <a href="https://naschi.at/vermietung/innsbruck"
+        >https://naschi.at/vermietung/innsbruck</a
       ><br />
     </div>
   </div>

@@ -3,7 +3,54 @@ import Layout from "../../layouts/Layout.astro";
 import LeafletMapInnsbruck from "../../components/LeafletMapInnsbruck.astro";
 import ImageGallery from "../../components/ImageGallery.vue";
 import { formatDate } from "../../util/formatDate";
-import gallery from "../../media/graz.json";
+
+const gallery = [
+  {
+    fileNameSrc: "/media/graz/1_grundriss.jpg",
+    alt: "Grundrissplan von der Wohnung",
+    title: "Grundrissplan von der Wohnung",
+  },
+  {
+    fileNameSrc: "/media/graz/2_wohn_esszimmer_re.jpg",
+    alt: "Wohn- Essbereich von links fotografiert",
+    title: "Wohn- Essbereich",
+  },
+  {
+    fileNameSrc: "/media/graz/3_wohn_esszimmer_li.jpg",
+    alt: "Wohn- Essbereich von rechts fotografiert",
+    title: "Wohn- Essbereich",
+  },
+  {
+    fileNameSrc: "/media/graz/4_kuechenblock.jpg",
+    alt: "Küchenblock",
+    title: "Küchenblock",
+  },
+  {
+    fileNameSrc: "/media/graz/5_vorraum.jpg",
+    alt: "Vorraum",
+    title: "Vorraum",
+  },
+  {
+    fileNameSrc: "/media/graz/6_bad_eingang.jpg",
+    alt: "Bad WC Dusche",
+    title: "Bad",
+  },
+  {
+    fileNameSrc: "/media/graz/7_schlafzimmer.jpg",
+    alt: "Schlafzimmer",
+    title: "Schlafzimmer",
+  },
+  {
+    fileNameSrc: "/media/graz/8_balkon.jpg",
+    alt: "Balkon in Sicht in den Innenhof",
+    title: "Balkon",
+  },
+  {
+    fileNameSrc: "/media/graz/9_eingangsbereich.jpg",
+    alt: "Eingangsberich",
+    title: "Eingangsberich",
+  },
+];
 
 const _builTime = new Date(import.meta.env.VITE_APP_BUILDTIME);
 const builTime = formatDate(_builTime);
