@@ -35,6 +35,7 @@
             @click="count = index"
           >
             <source
+              :sizes="selectedImage.sizes"
               :srcset="
                 getResponsiveSource(
                   '',
@@ -45,7 +46,13 @@
               "
               type="image/webp"
             />
-            <source :srcset="selectedImage.srcset" type="image/jpeg" />
+            <source               :sizes="selectedImage.sizes"
+            :srcset="getResponsiveSource(
+                  '',
+                  true,
+                  filteredMedia(item.fileNameSrc),
+                  '',
+                ).srcset" type="image/jpeg" />
             <img
               class="image"
               :srcset="
