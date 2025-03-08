@@ -1,6 +1,6 @@
 <template>
   <div>
-    <picture>
+    <picture @click="navigate(1)" style="cursor: pointer;">
       <source
         :sizes="selectedImage.sizes"
         :srcset="selectedImage.srcsetWebp"
