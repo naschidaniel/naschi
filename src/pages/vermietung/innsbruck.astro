@@ -39,11 +39,11 @@ const gallery = [
 const _builTime = new Date(import.meta.env.VITE_APP_BUILDTIME);
 const builTime = formatDate(_builTime);
 
-const betriebskosten = "350,00";
-const mietzins = "1200,00";
+const betriebskosten = "250,00";
+const mietzins = "1300,00";
 const ueberweisungsbetrag = "1550,00";
 const kaution = "4650,00";
-const verfuegbar = "2025-XX-XX";
+const verfuegbar = "2025-08-01";
 ---
 
 <Layout title="naschi.at – Vermietung Innsbruck">
@@ -63,6 +63,8 @@ const verfuegbar = "2025-XX-XX";
     Kochen ein, während das Badezimmer mit Dusche und Fenster überzeugt. Das zum
     Innenhof ausgerichtete Schlafzimmer garantiert ruhige Nächte. Ein Abstellraum
     mit Waschmaschinenanschluss und Gasetagenheizung bietet zusätzlichen Stauraum.
+    Des Weiteren befindet sich im Zimmer ein großer fix eingebauter Pax Schrank mit
+    rund 400 cm Länge.
   </p>
 
   <p>
@@ -85,7 +87,7 @@ const verfuegbar = "2025-XX-XX";
   <h3 class="no-print">Kostenaufstellung</h3>
   <p>
     Die <strong>Mietzins</strong> für die Wohnung beträgt <strong
-      >EUR {mietzins} pro Monat
+      >EUR {mietzins} (inkl. MWST) pro Monat
     </strong>. Die
     <strong>Betriebskosten</strong> belaufen sich bei <strong
       >rund EUR {betriebskosten} (inkl. MWST) pro Monat
@@ -262,7 +264,7 @@ const verfuegbar = "2025-XX-XX";
           Einbauküche (Einbaudatum 2023) Geschirrspüler Herd, Kochfeld,
           Kühlschrank
         </li>
-        <li>Großer Paxschrank im Schlafzimmer und im Zimmer</li>
+        <li>Großer Paxschrank im Zimmer mit 400 cm Länge</li>
       </ul>
     </div>
     <div class="grid-item">
@@ -322,11 +324,11 @@ const verfuegbar = "2025-XX-XX";
       <strong>Raumhöhe:</strong> 2,85 m<br />
       <strong>Fahrstuhl:</strong> Ja<br />
       <strong>Einbauküche inkl. Geräte:</strong> Ja<br />
+      <strong>Pax Einbauschrank</strong> im Zimmer<br />
       <strong>Zentralheizung / Warmwasser:</strong> Fernwärme<br />
-      <strong>Mietzins:</strong> EUR {mietzins}<br />
-      <strong>Betriebskosten:</strong> EUR {betriebskosten} (exklusive Warmwasser
+      <strong>Mietzins:</strong> EUR {mietzins} (inkl. MWST)<br />
+      <strong>Betriebskosten:</strong> EUR {betriebskosten} (inkl. MWST, exkl. Warmwasser-
       und Heizkosten)<br />
-      <br />
       <br />
       <strong>Die Wohnung ist ab {verfuegbar} verfügbar.</strong><br />
       <strong>Daniel Naschberger</strong><br />
