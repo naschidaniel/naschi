@@ -123,6 +123,8 @@ const { title } = Astro.props as Props;
         <!-- <a href="/vermietung">Vermietung</a> -->
         <span class="spacer">–</span>
         <a href="/impressum">Impressum</a>
+        <span class="spacer">–</span>
+        <a href="/mqtt">MQTT</a>
         <span class="spacer sm-d-none">–</span>
         <br class="md-d-none" />
         <span class="sm-mt-2">Version: {builTime},&nbsp;{currentGitSha}</span>
@@ -183,8 +185,8 @@ const { title } = Astro.props as Props;
   }
 
   .spacer {
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-left: 0.8em;
+    margin-right: 0.8em;
   }
 
   .basic-map-gallery-container {
