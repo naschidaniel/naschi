@@ -2,6 +2,7 @@ User-agent: *
 Disallow: /404.html
 Disallow: /impressum
 Disallow: /favicon
+Disallow: /mqtt
 
 Allow: /
 
