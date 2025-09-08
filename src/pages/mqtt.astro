@@ -7,18 +7,18 @@ import Layout from "../layouts/Layout.astro";
   import { formatTime, isExceeded } from "../util/formatDate";
   const client = mqtt.connect("wss://naschi.at:8081");
   client.on("connect", () => {
-    client.subscribe("heuhnerstall/temperature", (err) => {
-      if (!err) console.log("Subscribed to heuhnerstall/temperature");
+    client.subscribe("huehnerstall/temperature", (err) => {
+      if (!err) console.log("Subscribed to huehnerstall/temperature");
     });
   });
 
   client.on("message", (_topic, message) => {
     const data = JSON.parse(message.toString());
-    document.getElementById("heuhnerstall/temperature:timestamp").innerHTML =
+    document.getElementById("huehnerstall/temperature:timestamp").innerHTML =
       formatTime(new Date(data["timestamp"]));
-    document.getElementById("heuhnerstall/temperature:value").innerHTML =
+    document.getElementById("huehnerstall/temperature:value").innerHTML =
       data["value"] + " °C";
-    document.getElementById("heuhnerstall/temperature:badge").classList =
+    document.getElementById("huehnerstall/temperature:badge").classList =
       "badge " +
       (isExceeded(new Date(data["timestamp"]), 3000) ? "up" : "down");
   });
@@ -35,14 +35,14 @@ import Layout from "../layouts/Layout.astro";
       </tr>
       <tr>
         <td
-          ><span id="heuhnerstall/temperature:topic"
-            >heuhnerstall/temperature</span
+          ><span id="huehnerstall/temperature:topic"
+            >huehnerstall/temperature</span
           ></td
         >
-        <td><span id="heuhnerstall/temperature:timestamp">–</span></td>
+        <td><span id="huehnerstall/temperature:timestamp">–</span></td>
         <td
-          ><span id="heuhnerstall/temperature:value">–</span>
-          <span id="heuhnerstall/temperature:badge"></span></td
+          ><span id="huehnerstall/temperature:value">–</span>
+          <span id="huehnerstall/temperature:badge"></span></td
         >
       </tr>
     </table>
