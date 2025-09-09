@@ -1,4 +1,4 @@
-# naschi.at [![build](https://github.com/naschidaniel/naschi/actions/workflows/build.yml/badge.svg)](https://github.com/naschidaniel/naschi/actions/workflows/build.yml)
+# naschi.at [![build](https://github.com/naschidaniel/naschi/actions/workflows/build.yml/badge.svg)](https://github.com/naschidaniel/naschi/actions/workflows/build.yml) [![Backend CI](https://github.com/naschidaniel/naschi/actions/workflows/backend.yml/badge.svg)](https://github.com/naschidaniel/naschi/actions/workflows/backend.yml)
 
 ![Logo naschi.at](./public/NaschiLogo.png "naschi.at")
 
