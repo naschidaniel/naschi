@@ -35,5 +35,6 @@ def main():
     mqttc.connect(HOST, PORT, 60)
     mqttc.loop_forever()
 
+
 if __name__ == "__main__":
     main()
