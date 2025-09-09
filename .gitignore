@@ -5,6 +5,7 @@ node_modules
 deploy.sh
 
 # local env files
+.env
 .env.local
 .env.*.local
 
@@ -31,3 +32,10 @@ image-optimizer.exe
 # optimized images
 public/media
 src/media/media.json
+
+# data file
+*.pyc
+backend/.coverage
+data/data.json
+backend/__pycache__
+*naschi-*.tar.gz

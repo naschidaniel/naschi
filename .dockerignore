@@ -1,0 +1,9 @@
+image-optimizer.exe
+image-optimizer
+naschi*.tar.gz
+node_modules
+.git
+.github
+.astro
+*.pyc
+*.log
