@@ -95,7 +95,9 @@ client.on("connect", () => {
 });
 
 client.on("message", (_topic, message) => {
-  items.value = JSON.parse(message.toString());
+  const pos = items.value.map(e => e.topic).indexOf("huehnerstall/temperature");
+  if (pos !== -1) items.value.splice(pos, 1);
+  items.value.push(JSON.parse(message.toString()));
 });
 
 client.on("close", () => {
@@ -116,6 +118,7 @@ function setMaxAgeTimestamp() {
   width: 12px;
   padding: 1px;
   margin-left: 5px;
+  margin-right: 5px;
   border-radius: 50%;
   display: inline-block;
   vertical-align: middle;
