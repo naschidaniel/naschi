@@ -32,7 +32,7 @@ type SensorValue = {
 const items = ref([] as SensorValue[]);
 
 onMounted(async () => {
-  items.value[0] = await fetch('https://naschi.at/data/data.json').then((response) => response.json());
+  items.value[0] = await fetch('/data/data.json').then((response) => response.json());
 })
 
 const client = mqtt.connect("wss://naschi.at:8081");
