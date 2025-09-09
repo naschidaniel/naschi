@@ -1,10 +1,13 @@
 <template>
   <table>
+    <thead>
       <tr>
         <th>Topic</th>
         <th>Zeit</th>
         <th>Wert</th>
       </tr>
+    </thead>
+    <tbody>
       <tr v-for="item in items" :key="item.topic">
         <td
           >{{ item.topic }}</td
@@ -15,7 +18,8 @@
           <span class="badge" :class="isExceeded(new Date(item.timestamp), 3000) ? 'up' : 'down'"></span></td
         >
       </tr>
-    </table>
+    </tbody>
+  </table>
 </template>
 
 <script setup lang="ts">
