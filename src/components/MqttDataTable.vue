@@ -80,7 +80,7 @@ const connected = ref(false);
 const maxAgeTimestamp = ref(new Date(Date.now() - 1000 * threshold));
 
 onMounted(async () => {
-  items.value[0] = await fetch("/data/data.json").then((response) =>
+  items.value = await fetch("/data/data.json").then((response) =>
     response.json(),
   );
   setMaxAgeTimestamp();
@@ -95,7 +95,7 @@ client.on("connect", () => {
 });
 
 client.on("message", (_topic, message) => {
-  items.value[0] = JSON.parse(message.toString());
+  items.value = JSON.parse(message.toString());
 });
 
 client.on("close", () => {
