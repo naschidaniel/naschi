@@ -27,8 +27,8 @@ export function formatTime(date: Date) {
   return date === undefined ? "–" : dateTimeFormat.format(date);
 }
 
-export function isExceeded(date: Date, thresholdInMs: number) {
-  return date === undefined
-    ? "–"
-    : new Date().getTime() - date.getTime() < thresholdInMs;
+export function compareDates(date1: Date, date2: Date): boolean {
+  return date1 === undefined || date2 === undefined
+    ? false
+    : date1.getTime() > date2.getTime();
 }
