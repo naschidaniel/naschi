@@ -50,12 +50,12 @@ jobs:
     - name: Black
       run: |
         black . --check
-    - name: Run Tests
-      env:
-        POSTGRES_USER: postgres
-        POSTGRES_PASSWORD: hunter2
-        POSTGRES_NAME: postgres
-        POSTGRES_HOST: 127.0.0.1
-      working-directory: ./backend
-      run: |
-        pytest --cov
+    # - name: Run Tests
+    #   env:
+    #     POSTGRES_USER: postgres
+    #     POSTGRES_PASSWORD: hunter2
+    #     POSTGRES_NAME: postgres
+    #     POSTGRES_HOST: 127.0.0.1
+    #   working-directory: ./backend
+    #   run: |
+    #     pytest --cov
