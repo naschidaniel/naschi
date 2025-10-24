@@ -11,16 +11,6 @@ Visit my personal website [https://naschi.at](https://naschi.at).
 yarn
 ```
 
-### Backend
-
-```
-python -m venv venv
-source venv/bin/activate
-pip install -r backend/requirements.txt
-
-cd backend
-```
-
 ## Optimize Images for Development and Production
 
 Place the v0.5.0 release of the [image-optimizer](https://github.com/naschidaniel/image-optimizer) for your system in the root directory. For local development, the original images are used.
@@ -51,6 +41,7 @@ yarn preview
 
 ## Changelog
 
+- 2025-10-24 Drop Python Backend and MQTT Client
 - 2025-09-08 Add Python Backend for MQTT
 - 2025-09-05 Add Support for MQTT
 - 2023-02-02 upgrade to astro v2.0

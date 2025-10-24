@@ -33,15 +33,5 @@ process.env.VITE_APP_GITSHA = execSync("git rev-parse --short HEAD", {
 
 export default defineConfig({
   integrations: [vue()],
-  vite: {
-    server: {
-      proxy: {
-        "/data": {
-          target: "https://naschi.at/",
-          changeOrigin: true,
-        },
-      },
-      cors: true,
-    },
-  },
+  vite: {},
 });
