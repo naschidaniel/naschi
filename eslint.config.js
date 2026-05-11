@@ -10,6 +10,15 @@ export default [
   ...eslintPluginAstro.configs.recommended,
   eslintPluginPrettierRecommended,
   {
+    files: [
+      "src/components/LeafletMapInnsbruck.astro",
+      "src/components/LeafletMapGraz.astro",
+    ],
+    rules: {
+      "prettier/prettier": "off",
+    },
+  },
+  {
     rules: {
       // override/add rules settings here, such as:
       // "astro/no-set-html-directive": "error"
