@@ -39,3 +39,5 @@ backend/.coverage
 data/data.json
 backend/__pycache__
 *naschi-*.tar.gz
+public/vermietung/expose-graz.pdf
+public/vermietung/expose-innsbruck.pdf
